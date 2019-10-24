@@ -1028,7 +1028,7 @@ en:
     all: All
     all_adjustments_finalized: All adjustments successfully finalized!
     all_adjustments_unfinalized: All adjustments successfully unfinalized!
-    all_departments: All departments
+    all_departments: 全ての分類
     all_items_have_been_returned: All items have been returned
     already_signed_up_for_analytics: You have already signed up for Spree Analytics
     alt_text: Alternative Text
