@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_16_014607) do
+ActiveRecord::Schema.define(version: 2019_10_24_142524) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -1059,6 +1059,15 @@ ActiveRecord::Schema.define(version: 2019_10_16_014607) do
     t.index ["address_id"], name: "index_spree_user_addresses_on_address_id"
     t.index ["user_id", "address_id"], name: "index_spree_user_addresses_on_user_id_and_address_id", unique: true
     t.index ["user_id"], name: "index_spree_user_addresses_on_user_id"
+  end
+
+  create_table "spree_user_billings", force: :cascade do |t|
+    t.integer "user_id"
+    t.boolean "is_billing"
+    t.date "expired_date"
+    t.integer "return_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "spree_user_stock_locations", force: :cascade do |t|

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_billing: false
+  expired_date: 2019-10-24
+  return_status: 1
+
+two:
+  is_billing: false
+  expired_date: 2019-10-24
+  return_status: 1

@@ -4,6 +4,16 @@
   <dl id="user-info">
     <dt><%= I18n.t('spree.email') %></dt>
     <dd><%= @user.email %> (<%= link_to I18n.t('spree.edit'), spree.edit_account_path %>)</dd>
+    <dt>会員状況</dt>
+    <dd>
+      <% if current_spree_user&.user_billing&.is_billing? %>
+        サブスクリプション会員登録済み
+      <% else %>
+        サブスクリプション未登録
+        <br>
+        <%= link_to "登録ページへ","/charges/new" %>
+      <% end %>
+    </dd>
   </dl>
 </div>
 
