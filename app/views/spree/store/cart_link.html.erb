@@ -1,1 +1,7 @@
-<%= link_to_cart %>
+<% if current_spree_user&.user_billing&.is_billing? %>
+  <%= link_to_cart %>
+<% else %>
+  サブスクリプション登録を行うことで
+  <br>
+  <%= link_to "登録ページへ","/charges/new" %>
+<% end %>

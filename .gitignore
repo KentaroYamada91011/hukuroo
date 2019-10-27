@@ -31,4 +31,4 @@
 /config/master.key
 
 # 環境変数
-/.env
+/.env*

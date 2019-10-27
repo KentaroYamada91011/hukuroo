@@ -43,6 +43,8 @@ gem 'activemerchant', '~>1.61'
 gem 'stripe'
 gem 'rails-i18n'
 gem 'dotenv-rails'
+gem 'aws-sdk', '< 3.0'
+gem 'fog-aws'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
