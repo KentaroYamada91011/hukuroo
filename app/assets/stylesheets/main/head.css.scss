@@ -1,0 +1,56 @@
+@import "../common/variables";
+.front__header {
+  &__wrapper {
+    position: fixed;
+    display: flex;
+    top: 0;
+    height: 52px;
+    width: 100%;
+    background: $hukuroo-headerBlack;
+    justify-content: center;
+  }
+
+  &__logo {
+    text-align: center;
+    a {
+      font-size: 24px;
+      margin-right: 8px;
+      line-height: 52px;
+      color: $text-highWhite;
+      @include font-hiragino-bold;
+
+      &:hover {
+        color: $text-highWhite;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    li {
+      a {
+        margin-right: 8px;
+        line-height: 52px;
+        color: $text-highWhite;
+        @include font-hiragino-medium;
+
+        &:hover {
+          color: $text-highWhite;
+        }
+
+        &.front__header__logo {
+          font-size: 24px;
+          @include font-hiragino-bold;
+        }
+      }
+
+      form {
+        display: flex;
+        margin: 8px 0 0 16px;
+        .select-custom {
+          margin: auto;
+        }
+      }
+    }
+  }
+}

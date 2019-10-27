@@ -1,0 +1,42 @@
+<button type="button" class="drawer-toggle drawer-hamburger ">
+	<span class="sr-only">toggle navigation</span>
+	<span class="drawer-hamburger-icon"></span>
+</button>
+<nav class="drawer-nav">
+	<ul class="drawer-menu">
+		<li>
+			<%= render partial: 'spree/shared/search' %>
+		</li>
+		<li id="link-to-cart" data-hook>
+      <%= link_to "カート", spree.cart_link_path %>
+      <noscript>
+        <%= link_to "カート", spree.cart_link_path %>
+      </noscript>
+      &nbsp;
+    </li>
+		<li><%= render 'spree/shared/locale_selector' %></li>
+		<li><%= render 'spree/shared/login_bar_items' %></li>
+		<% if @taxonomies.present? %>
+		<li><%= render 'spree/shared/taxonomies' %></li>
+		<% end %>
+	</ul>
+</nav>
+<script>
+$('.drawer').drawer({
+  class: {
+    nav: 'drawer-nav',
+    toggle: 'drawer-toggle',
+    overlay: 'drawer-overlay',
+    open: 'drawer-open',
+    close: 'drawer-close',
+    dropdown: 'drawer-dropdown'
+  },
+  iscroll: {
+    // Configuring the iScroll
+    // https://github.com/cubiq/iscroll#configuring-the-iscroll
+    mouseWheel: true,
+    preventDefault: false
+  },
+  showOverlay: true
+});
+</script>

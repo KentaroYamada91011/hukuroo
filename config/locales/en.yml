@@ -115,24 +115,24 @@ en:
       spree/inventory_unit:
         state: State
       spree/legacy_user:
-        email: Email
-        password: Password
-        password_confirmation: Password Confirmation
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワードの確認
         spree_roles: Roles
       spree/line_item:
-        description: Item Description
-        name: Name
-        price: Price
-        quantity: Quantity
-        total: Total price
+        description: 商品の詳細
+        name: 名前
+        price: 価格
+        quantity: 品質
+        total: 合計金額
       spree/log_entry:
-        details: Message
-        created_at: Date/Time
+        details: メッセージ
+        created_at: 日/時間
       spree/option_type:
-        name: Name
+        name: 名前
         presentation: Presentation
       spree/option_value:
-        name: Name
+        name: 名前
         presentation: Presentation
       spree/order:
         additional_tax_total: Tax
@@ -278,7 +278,7 @@ en:
         value: Value
       spree/promotion_code_batch:
         base_code: Base code
-        email: Email
+        email: メールアドレス
         join_characters: Join characters
         number_of_codes: Number of codes
         status: Status
@@ -438,7 +438,7 @@ en:
         active: Active
         analytics_id: Analytics ID
       spree/user:
-        email: Email
+        email: メールアドレス
         lifetime_value: Total spent
         password: Password
         password_confirmation: Password Confirmation
@@ -1131,7 +1131,7 @@ en:
     card_number: Card Number
     card_type: Brand
     card_type_is: Card type is
-    cart: Cart
+    cart: カート
     cart_subtotal:
       one: Subtotal (1 item)
       other: Subtotal (%{count} items)
@@ -1316,13 +1316,13 @@ en:
           applying this coupon code.
         no_user_specified: You need to login before applying this coupon code.
         not_first_order: This coupon code can only be applied to your first order.
-    email: Email
-    empty: Empty
-    empty_cart: Empty Cart
+    email: メールアドレス
+    empty: 空
+    empty_cart: カートは空です
     enable_mail_delivery: Enable Mail Delivery
     end: End
     ending_in: Ending in
-    error: error
+    error: エラー
     errors:
       messages:
         cannot_delete_finalized_stock_location: Stock Location cannot be destroyed
@@ -1582,8 +1582,8 @@ en:
     month: Month
     more: More
     move_stock_between_locations: Move Stock Between Locations
-    my_account: My Account
-    my_orders: My Orders
+    my_account: 自分の情報
+    my_orders: 過去に頼んだ商品
     name: Name
     name_on_card: Name on card
     name_or_sku: Name or SKU (enter at least first 4 characters of product name)
@@ -1730,7 +1730,7 @@ en:
       address: Address
       awaiting_return: Awaiting return
       canceled: Canceled
-      cart: Cart
+      cart: カート
       complete: Complete
       confirm: Confirm
       delivery: Delivery
@@ -1967,7 +1967,7 @@ en:
     say_yes: 'Yes'
     scope: Scope
     search: 検索
-    search_results: Search results for '%{keywords}'
+    search_results: 検索結果 '%{keywords}'
     searching: Searching
     secure_connection_type: Secure Connection Type
     security_settings: Security Settings
@@ -2033,7 +2033,7 @@ en:
         vat: incl. %{amount} %{tax_rate_name}
     shipping_total: Shipping total
     shop_by_taxonomy:  "%{taxonomy}"
-    shopping_cart: Shopping Cart
+    shopping_cart: ショッピングカート
     show: Show
     show_active: Show Active
     show_deleted: Show Deleted

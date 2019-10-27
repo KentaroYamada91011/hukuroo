@@ -1,9 +1,30 @@
-<header id="header" class="row" data-hook>
-  <figure id="logo" class="columns six" data-hook>
-  <%= link_to spree.root_path do%>
-    <%= image_tag('logo.png', width:'100',height:'80',alt:'フクロー') %>
-  <% end %>
-  </figure>
-  <%= render partial: 'spree/shared/nav_bar' %>
-  <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
+<header id="header" class="row front__header__wrapper js-humberger_background" data-hook>
+  <div id="home-link" class="front__header__logo" data-hook><%= link_to "フクロー", spree.root_path %></div>
+  <ul id="nav-bar" class="front__header__content js-humberger" data-hook>
+    <li id="search-bar" data-hook>
+      <%= render partial: 'spree/shared/search' %>
+    </li>
+  </ul>
+  <ul class="js-humberger">_______________________</ul>
+  <ul id="mainNav-bar" class="front__header__content js-humberger" data-hook>
+    <li id="link-to-cart" data-hook>
+      <%= link_to "カート", spree.cart_link_path %>
+      <noscript>
+        <%= link_to "カート", spree.cart_link_path %>
+      </noscript>
+      &nbsp;
+    </li>
+    <%= render 'spree/shared/locale_selector' %>
+    <%= render 'spree/shared/login_bar_items' %>
+  </ul>
+  <%
+=begin%>
+ <div class="menu-trigger"> <!-- ←ハンバーガーボタン -->
+    <span>-</span>
+    <span>-</span>
+    <span>-</span>
+  </a> 
+<%
+=end%>
+  <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
 </header>

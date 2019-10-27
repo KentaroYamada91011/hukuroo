@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@mixin pc {
+  @media screen and (min-width:750px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: 749px) {
+    @content;
+  }
+}
+
+//Typography
+@mixin font-hiragino-bold {
+  font-family: 'Hiragino Sans W8','HiraginoSans-W8', '游ゴシック Bold', "Yu Gothic Bold", "游ゴシック", "Yu Gothic", Meiryo, メイリオ, Osaka, arial, helvetica, sans-serif;
+  font-weight: 800;
+}
+
+@mixin font-hiragino-medium {
+  font-family: 'Hiragino Sans W6','HiraginoSans-W6', '游ゴシック Medium', "Yu Gothic Medium", "游ゴシック", 'Yu Gothic', Meiryo, メイリオ, Osaka, arial, helvetica, sans-serif;
+}
+// Text Colors
+$text-highBlack: rgba(#000, 0.87); // black-087
+$text-MediumBlack: rgba(#000, 0.54); // black-054
+$text-disabledBlack: rgba(#000, 0.26); // black-026
+$border-black: rgba(#000, 0.12); // black-012
+$text-highWhite: rgba(#fff, 1.0); //white-100
+$text-MediumWhite: rgba(#fff, 0.7); //white-070
+$text-disabledWhite: rgba(#fff, 0.30); //white-030
+$border-white: rgba(#fff, 0.12); //white-012
+
+// Style Guide Key Colors
+$hukuroo-green: #00B9BE; // Primary-050
+$hukuroo-lightGreen: #cef7f6; // Primary-030
+$hukuroo-darkGreen: #005B68; // Primary-070
+$hukuroo-secondary: #FEE800; //Secondary-050
+$hukuroo-systemRed: #FF4D49; //SystemRed
+$hukuroo-lightGray: #F8FAFA; //Gray-010
+$hukuroo-gray: #E6E8E8; //Gray-020
+
+$hukuroo-headerBlack: #2b2b2b;
+$hukuroo-headerGreen: #00b9be;
