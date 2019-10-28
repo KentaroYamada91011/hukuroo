@@ -13,18 +13,9 @@
         <%= link_to "カート", spree.cart_link_path %>
       </noscript>
       &nbsp;
+      <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
     </li>
     <%= render 'spree/shared/locale_selector' %>
     <%= render 'spree/shared/login_bar_items' %>
   </ul>
-  <%
-=begin%>
- <div class="menu-trigger"> <!-- ←ハンバーガーボタン -->
-    <span>-</span>
-    <span>-</span>
-    <span>-</span>
-  </a> 
-<%
-=end%>
-  <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
 </header>
