@@ -52,14 +52,14 @@ en:
   activerecord:
     attributes:
       spree/address:
-        address1: Street Address
-        address2: Street Address (cont'd)
-        city: City
-        company: Company
-        firstname: First Name
-        lastname: Last Name
-        phone: Phone
-        zipcode: Zip Code
+        address1: 住所1
+        address2: 住所2
+        city: 市区町村
+        company: 会社
+        firstname: 名前（名）
+        lastname: 名前（姓）
+        phone: 電話番号
+        zipcode: 郵便番号
       spree/adjustment:
         adjustable: Adjustable
         adjustment_reason_id: Reason
@@ -69,7 +69,7 @@ en:
         state: State
       spree/adjustment_reason:
         active: Active
-        code: Code
+        code: コード
         name: Name
         state: State
       spree/calculator/flat_rate:
@@ -192,11 +192,11 @@ en:
         preference_source: Preference Source
         type: Type
       spree/price:
-        amount: Price
+        amount: 価格
         country: Country
         currency: Currency
         is_default: Currently Valid
-        price: Price
+        price: 価格
         variant: Variant
       spree/product:
         available_on: Available On
@@ -440,8 +440,8 @@ en:
       spree/user:
         email: メールアドレス
         lifetime_value: Total spent
-        password: Password
-        password_confirmation: Password Confirmation
+        password: パスワード
+        password_confirmation: パスワード確認
         spree_roles: Roles
       spree/variant:
         cost_currency: Cost Currency
@@ -822,7 +822,7 @@ en:
     add_action_of_type: Add action of type
     add_country: Add Country
     add_coupon_code: Add Coupon Code
-    add_line_item: Add Item
+    add_line_item: 商品を追加する
     add_new_header: Add New Header
     add_new_style: Add New Style
     add_one: Add One
@@ -988,7 +988,7 @@ en:
       user:
         account: Account
         addresses: Addresses
-        items: Items
+        items: 商品
         items_purchased: Items Purchased
         order_history: Order History
         order_num: 'Order #'
@@ -1169,9 +1169,9 @@ en:
     confirm: Confirm
     confirm_delete: Confirm Deletion
     confirm_order: Confirm Order
-    confirm_password: Password Confirmation
-    continue: Continue
-    continue_shopping: Continue shopping
+    confirm_password: パスワード確認
+    continue: 続ける
+    continue_shopping: ショッピングを続ける
     cost_currency: Cost Currency
     cost_price: Cost Price
     could_not_connect_to_jirafe: Could not connect to Jirafe to sync data. This will
@@ -1291,7 +1291,7 @@ en:
     editing_tax_category: Editing Tax Category
     editing_tax_rate: Editing Tax Rate
     editing_tracker: Editing Tracker
-    editing_user: Editing User
+    editing_user: ユーザー編集
     editing_zone: Editing Zone
     eligibility_errors:
       messages:
@@ -1377,7 +1377,7 @@ en:
     flat_percent: Flat Percent
     flat_rate_per_order: Flat Rate
     flexible_rate: Flexible Rate
-    forgot_password: Forgot Password?
+    forgot_password: パスワードをお忘れですか？
     free_shipping: Free Shipping
     free_shipping_amount: "-"
     from: From
@@ -1515,9 +1515,9 @@ en:
       shipped: Shipped
     is_not_available_to_shipment_address: is not available to shipment address
     iso_name: Iso Name
-    item: Item
-    item_description: Item Description
-    item_total: Item Total
+    item: 商品
+    item_description: 商品詳細
+    item_total: 商品合計
     item_total_rule:
       operators:
         gt: greater than
@@ -1750,7 +1750,7 @@ en:
       next_page: next page &raquo;
       previous_page: "&laquo; previous page"
       truncate: "&hellip;"
-    password: Password
+    password: パスワード
     paste: Paste
     path: Path
     pay: pay
@@ -1857,7 +1857,7 @@ en:
     properties: Property Types
     property: Property Type
     provider: Provider
-    qty: Qty
+    qty: 数量
     quantity: Quantity
     quantity_returned: Quantity Returned
     quantity_shipped: Quantity Shipped
@@ -1920,7 +1920,7 @@ en:
     remove: Remove
     rename: Rename
     resend: Resend
-    reset_password: Reset my password
+    reset_password: パスワードをリセット
     response_code: Response Code
     restock_inventory: Restock Inventory
     resume: Resume
@@ -2170,7 +2170,7 @@ en:
     time: Time
     to: to
     to_add_variants_you_must_first_define: To add variants, you must first define
-    total: Total
+    total: 合計
     total_excluding_vat: Pre-Tax Total
     total_per_item: Total per Item
     total_pre_tax_refund: Total Pre-Tax Refund

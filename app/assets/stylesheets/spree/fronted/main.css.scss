@@ -1,0 +1,7 @@
+#breadcrumbs {
+  width: 920px;
+  margin: auto;
+  @media screen and (max-width: 749px) {
+    width: 100%;
+  }
+}
