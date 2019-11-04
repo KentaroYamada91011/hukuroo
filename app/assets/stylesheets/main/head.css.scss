@@ -54,3 +54,15 @@
     }
   }
 }
+
+.front__image__wrapper {
+  object-fit: cover;
+  height: 420px;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 36px;
+  @include sp {
+    height: 320px;
+    width: auto;
+  }
+}
