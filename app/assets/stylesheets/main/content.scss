@@ -1,0 +1,14 @@
+@import "../common/variables";
+
+.fronted__content {
+  &__image {
+    height: 160px;
+    a {
+      img {
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        object-fit: cover;
+      }
+    }
+  }
+}
