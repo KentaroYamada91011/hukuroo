@@ -1,1 +1,3 @@
-<%= image_tag 'hukuroo.jpg', class: "front__image__wrapper" %>
+<%= link_to main_app.introductions_path, class: "front__image__wrapper" do %>
+  <%= image_tag 'hukuroo.jpg', class: "front__image__content" %>
+<% end %>

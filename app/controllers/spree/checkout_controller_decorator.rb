@@ -12,10 +12,7 @@ Spree::CheckoutController.class_eval do
       # end
 
       # if @order.completed?
-      p "ヤマダ"
-      p @order
       @order.state = "confirm"
-      p Spree::OrderMutex.create(order_id: @order.id)
       Spree::OrderMutex.create(order_id: @order.id)
       # finalize_order
       redirect_to checkout_state_path(@order.state)
