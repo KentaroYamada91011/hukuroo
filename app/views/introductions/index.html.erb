@@ -28,12 +28,16 @@
             <div class="amount">
               <p>
                 <span class="amount__prefix">月額</span>
-                <span class="amount__value">￥5,800</span>
-                <span class="amount__suffix">（税別）</span>
+                <span class="amount__value">￥4,000</span>
+                <span class="amount__suffix">（税込）</span>
               </p>
-              <p>
+              <%
+=begin%>
+ <p>
                 <small>別途返却手数料:380円/1回(税別)</small>
-              </p>
+              </p> 
+<%
+=end%>
             </div>
           </div>
           <div class="section-about__image">
@@ -325,8 +329,7 @@
       <div class="section-lifestyle__body">
         <header class="section-lifestyle__header">
           <h2 class="section-lifestyle__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <span>MECHAKARIのある</span>
-            <span>ライフスタイル</span>
+            <%= link_to '会員登録はこちら', spree.signup_path %>
           </h2>
         </header>
         <div class="section-lifestyle__content">

@@ -3,6 +3,7 @@ class CreateSpreeUserBillings < ActiveRecord::Migration[5.2]
     create_table :spree_user_billings do |t|
       t.integer :user_id
       t.boolean :is_billing
+      t.integer :ticket_number
       t.date :expired_date
       t.integer :return_status
 

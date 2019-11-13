@@ -71,6 +71,8 @@
     <tr data-hook="admin_users_index_headers">
       <th><%= sort_link @search, :email, Spree.user_class.human_attribute_name(:email), {}, {title: 'users_email_title'} %></th>
       <th><%= Spree.user_class.human_attribute_name(:spree_roles) %></th>
+      <th>チケット数</th>
+      <th>有効期限</th>
       <th class="align-center"><%= t('spree.num_orders') %></th>
       <th class="align-center"><%= Spree.user_class.human_attribute_name(:lifetime_value) %></th>
       <th class="align-center"><%= sort_link @search, :created_at, t('spree.member_since') %></th>
@@ -81,7 +83,9 @@
     <% @users.each do |user|%>
       <tr id="<%= spree_dom_id user %>" data-hook="admin_users_index_rows">
         <td class='user_email'><%=link_to user.email, edit_admin_user_url(user) %></td>
-        <td><%= user.spree_roles.map(&:name).to_sentence %></td>
+        <td><%= user.spree_roles.map(&:name).to_sentence %><%= user.try(:user_billing).try(:is_billing)? "有料会員": "無料会員" %></td>
+        <td><%= user.try(:user_billing).try(:ticket_number) %></td>
+        <td><%= user.try(:user_billing).try(:expired_date) %></td>
         <td class="align-center"><%= link_to user.order_count, spree.orders_admin_user_path(user) %></td>
         <td class="align-center"><%= link_to user.display_lifetime_value, spree.items_admin_user_path(user) %></td>
         <td class="align-center"><%= l user.created_at.to_date %></td>

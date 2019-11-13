@@ -802,7 +802,7 @@ en:
       add: Add
       cancel: Cancel
       continue: Continue
-      create: Create
+      create: 登録
       delete: Delete
       destroy: Destroy
       edit: Edit
@@ -1551,7 +1551,7 @@ en:
     logged_in_succesfully: Logged in successfully
     logged_out: You have been logged out.
     login: Login
-    login_as_existing: Login as Existing Customer
+    login_as_existing: 登録済みの方はこちら
     login_failed: Login authentication failed.
     login_name: Login
     logout: Logout
@@ -1593,7 +1593,7 @@ en:
     new_adjustment: New Adjustment
     new_adjustment_reason: New Adjustment Reason
     new_country: New Country
-    new_customer: New Customer
+    new_customer: 新規会員登録
     new_customer_return: New Customer Return
     new_image: New Image
     new_option_type: New Option Type

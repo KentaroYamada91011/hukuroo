@@ -4,7 +4,7 @@ class ChargesController < ApplicationController
   
   def create
     form = Spree::UserBilling.find_or_initialize_by(user_id:current_spree_user.id)
-    form = Spree::UserBilling.update(user_billing_params)
+    form = form.update(user_billing_params)
     @amount = 4000#引き落とす金額
     product = Stripe::Product.create({
       name: 'My SaaS Platform',
@@ -36,14 +36,15 @@ class ChargesController < ApplicationController
     redirect_to root_path
 
   end
-  
+
   private
 
   def user_billing_params
-    data = params.fetch(:user_billing, {}).permit(:user_id,:is_billing,:expired_date)
+    data = params.fetch(:user_billing, {}).permit(:user_id,:is_billing,:ticket_number, :expired_date)
     data[:user_id]        = current_spree_user.id
     data[:is_billing]     = true
-    data[:expired_date]   = Date.today
+    data[:ticket_number]  = 1
+    data[:expired_date]   = (Date.today >> 1).strftime
     data
   end
 end
