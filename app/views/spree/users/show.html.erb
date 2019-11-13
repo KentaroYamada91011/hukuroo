@@ -3,17 +3,33 @@
 <div data-hook="account_summary" class="account-summary">
   <dl id="user-info">
     <dt><%= I18n.t('spree.email') %></dt>
-    <dd><%= @user.email %> (<%= link_to I18n.t('spree.edit'), spree.edit_account_path %>)</dd>
+    <dd><%= @user.email %> (<%= link_to "メールアドレスを変更する", spree.edit_account_path %>)</dd>
     <dt>会員状況</dt>
     <dd>
-      <% if current_spree_user&.user_billing&.is_billing? %>
+      <% if spree_current_user.try(:user_billing).try(:expired_date).present? && spree_current_user.try(:user_billing).try(:expired_date) < Date.today %>
+        サブスクリプション期間の期限が切れています
+        <%= link_to "登録ページへ","/charges/new" %>
+      <% elsif spree_current_user.try(:user_billing).try(:ticket_number) == 0 %>
+        レンタル数の上限に達したためレンタルできません
+      <% elsif  current_spree_user&.user_billing&.is_billing? %>
+        サブスクリプション会員登録済み
+      <% else %>
+        <%= link_to "登録ページへ","/charges/new" %>
+      <% end %>
+    </dd>
+
+      <%
+=begin%>
+ <%if current_spree_user&.user_billing&.is_billing? %>
         サブスクリプション会員登録済み
       <% else %>
         サブスクリプション未登録
         <br>
         <%= link_to "登録ページへ","/charges/new" %>
-      <% end %>
-    </dd>
+      <% end %> 
+<%
+=end%>
+
   </dl>
 </div>
 
@@ -40,7 +56,7 @@
           <td class="order-status"><%= I18n.t("spree.order_state.#{order.state}").titleize %></td>
           <td class="order-payment-state"><%= I18n.t("spree.payment_states.#{order.payment_state}").titleize if order.payment_state %></td>
           <td class="order-shipment-state"><%= I18n.t("spree.shipment_states.#{order.shipment_state}").titleize if order.shipment_state %></td>
-          <td class="order-total"><%= order.display_total %></td>
+          <td class="order-total">¥ 0</td>
         </tr>
       <% end %>
       </tbody>

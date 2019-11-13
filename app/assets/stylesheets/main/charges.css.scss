@@ -1,0 +1,61 @@
+.fronted__charges__table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  max-width: 490px;
+  margin: auto;
+}
+
+.fronted__charges__table tr:last-child{
+  border-bottom:solid 1px #ddd;
+}
+
+.fronted__charges__table th{
+  text-align: center;
+  padding: 7px 0;
+  border-right:solid 1px #ddd;
+  border-left:solid 1px #ddd;
+  width: 155px;
+}
+
+.fronted__charges__table th:nth-child(1){
+  background-color:#dddddd;
+}
+
+.fronted__charges__table th:nth-child(3){
+  background-color:#f5b932;
+  color: white;
+}
+
+.fronted__charges__table tr:nth-child(2) td{
+  font-size: 30px;
+}
+
+.fronted__charges__table td{
+  text-align: center;
+  padding: 7px 0;
+  border-right:solid 1px #ddd;
+  border-left:solid 1px #ddd;
+  width: 155px;
+}
+
+.fronted__charges__table td a{
+  background-color: #25b327;
+  color: white;
+  padding:5px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.fronted__charges__table .popular{
+  width: 180px;
+}
+
+.fronted__charges__table th.popular{
+  position: relative;
+}
+
+.fronted__charges__table th.popular {
+  color:white;
+  background-color: #f34955;
+}

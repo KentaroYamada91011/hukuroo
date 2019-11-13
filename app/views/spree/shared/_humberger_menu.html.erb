@@ -19,7 +19,11 @@
 		<% if @taxonomies.present? %>
 		<li><%= render 'spree/shared/taxonomies' %></li>
 		<% end %>
-	</ul>
+    <li><%= link_to 'サービスについて', main_app.service_path %></li>
+    <li><%= link_to '利用規約', main_app.terms_path %></li>
+    <li><%= link_to 'プライバシーポリシー', main_app.privacy_policy_path %></li>
+    <li><%= link_to '会社概要', main_app.corporate_path %></li>
+  </ul>
 </nav>
 <script>
 $('.drawer').drawer({

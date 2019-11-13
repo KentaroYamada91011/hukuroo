@@ -76,9 +76,9 @@ a {
   -webkit-text-decoration-skip: objects
 }
 
-// a:active, a:hover {
-//   outline-width: 0
-// }
+a:active, a:hover {
+  outline-width: 0
+}
 
 code, kbd, pre, samp {
   font-family: monospace, monospace
@@ -377,9 +377,9 @@ a, button {
   transition: opacity .3s ease
 }
 
-// a:hover, button:hover {
-//   opacity: .5 !important
-// }
+a:hover, button:hover {
+  opacity: .5 !important
+}
 
 img {
   max-width: 100%;

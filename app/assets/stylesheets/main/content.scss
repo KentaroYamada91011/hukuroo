@@ -11,4 +11,9 @@
       }
     }
   }
+  &__taxons {
+    @include sp {
+      display: none;
+    }
+  }
 }

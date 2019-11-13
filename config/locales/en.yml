@@ -1083,7 +1083,7 @@ en:
     back_to_states_list: Back To States List
     back_to_stock_locations_list: Back to Stock Locations List
     back_to_stock_movements_list: Back to Stock Movements List
-    back_to_store: View store
+    back_to_store: ストアに戻る
     back_to_tax_categories_list: Back To Tax Categories List
     back_to_tax_rates_list: Back To Tax Rates List
     back_to_taxonomies_list: Back To Taxonomies List
@@ -1143,7 +1143,7 @@ en:
     charged: Charged
     check: Check
     check_stock_on_transfer: Check stock on transfer
-    checkout: Checkout
+    checkout: レンタルする
     choose_a_customer: Choose a Customer
     choose_a_taxon_to_sort_products_for: Choose a taxon to sort products for
     choose_currency: Choose Currency
@@ -1291,7 +1291,7 @@ en:
     editing_tax_category: Editing Tax Category
     editing_tax_rate: Editing Tax Rate
     editing_tracker: Editing Tracker
-    editing_user: ユーザー編集
+    editing_user: ユーザー情報編集
     editing_zone: Editing Zone
     eligibility_errors:
       messages:
@@ -1593,7 +1593,7 @@ en:
     new_adjustment: New Adjustment
     new_adjustment_reason: New Adjustment Reason
     new_country: New Country
-    new_customer: 新規会員登録
+    new_customer: 無料会員登録
     new_customer_return: New Customer Return
     new_image: New Image
     new_option_type: New Option Type
@@ -1722,7 +1722,7 @@ en:
     order_not_found: We couldn't find your order. Please try that action again.
     order_number: Order %{number}
     order_please_refresh: Order is not ready to be completed. Please refresh totals.
-    order_processed_successfully: Your order has been processed successfully
+    order_processed_successfully: 注文が完了しました
     order_ready_for_confirm: Order ready for confirmation
     order_refresh_totals: Refresh Totals
     order_resumed: Order resumed
@@ -1739,7 +1739,7 @@ en:
       returned: Returned
     order_summary: Order Summary
     order_sure_want_to: Are you sure you want to %{event} this order?
-    order_total: Order Total
+    order_total: 合計金額
     order_updated: Order Updated
     orders: Orders
     other_items_in_other: Other Items in Order
@@ -1792,7 +1792,7 @@ en:
     percent_per_item: Percent Per Item
     permalink: Permalink
     phone: Phone
-    place_order: Place Order
+    place_order: 注文を確定する
     please_define_payment_methods: Please define some payment methods first.
     please_enter_reasonable_quantity: Please enter a reasonable quantity.
     populate_get_error: Something went wrong. Please try adding the item again.
@@ -1961,8 +1961,8 @@ en:
     sales_total: Sales Total
     sales_total_description: Sales Total For All Orders
     sales_totals: Sales Totals
-    save_and_continue: Save and Continue
-    save_my_address: Save my address
+    save_and_continue: 次へ
+    save_my_address: 住所を保存する
     say_no: 'No'
     say_yes: 'Yes'
     scope: Scope
@@ -2200,7 +2200,7 @@ en:
     unlock: Unlock
     unrecognized_card_type: Unrecognized Card Type
     unshippable_items: Unshippable Items
-    update: Update
+    update: 更新する
     updated_successfully: Updated Successfully
     updating: Updating
     usage_limit: Usage Limit

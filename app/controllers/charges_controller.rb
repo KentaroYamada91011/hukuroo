@@ -1,4 +1,4 @@
-class ChargesController < ApplicationController
+class ChargesController < Spree::StoreController
   def new
   end
   

@@ -22,8 +22,18 @@
           <div class="links columns sixteen alpha omega" data-hook="cart_buttons">
             <%= button_tag t("spree.update"), class: "primary", id: "update-button" %>
 
-            <%= button_tag class: 'button checkout primary', id: 'checkout-link', name: 'checkout' do %>
-              <%= t('spree.checkout') %>
+            <% if spree_current_user.try(:user_billing).try(:expired_date).present? && spree_current_user.try(:user_billing).try(:expired_date) < Date.today %>
+              <div class='button checkout primary'>
+                有料プランの期限が切れているためレンタルできません
+              </div>
+            <% elsif spree_current_user.try(:user_billing).try(:ticket_number) == 0 %>
+              <div class='button checkout primary'>
+                レンタル数の上限に達したためレンタルできません
+              </div>
+            <% else %>
+              <%= button_tag class: 'button checkout primary', id: 'checkout-link', name: 'checkout' do %>
+                <%= t('spree.checkout') %>
+              <% end %>
             <% end %>
           </div>
         </div>
