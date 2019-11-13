@@ -39,5 +39,20 @@
   z-index: 111!important;
 }
 .drawer-nav {
-  margin-top: 52px;
+  text-align: center;
+  li {
+    margin: 12px 0;
+    a {
+      color: #646464;
+      font-size: 14px;
+    }
+
+    form {
+      padding: 0 75px;
+    }
+
+    &:first-child {
+      height: 32px;
+    }
+  }
 }

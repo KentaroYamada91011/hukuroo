@@ -1,3 +1,13 @@
+@import "../common/variables";
 .fronted__taxon__link {
-  color: #646464;
+  @include font-hiragino-medium;
+  padding:  12px 0;
+  // &:first-child {
+  //   padding:  0 0 12px 0;
+  // }
+
+  &__child {
+    color: #646464;
+    font-size: 14px;
+  }
 }

@@ -1,3 +1,11 @@
+@import "../common/variables";
 .fronted__footer {
   width: 100%!important;
+  &__items {
+    a {
+      color: #646464;
+      @include font-hiragino-medium;
+      margin: 4px;
+    }
+  }
 }
