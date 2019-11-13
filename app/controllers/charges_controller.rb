@@ -18,13 +18,13 @@ class ChargesController < ApplicationController
       amount: @amount,
     })
     customer = Stripe::Customer.create(
-      email:  params[:stripeEmail], #emailは暗号化されずに受け取れます
-      source: params[:stripeToken] #めちゃめちゃな文字列です 
+      email:  params[:stripeEmail], #emailは暗号化されずに受け取る
+      source: params[:stripeToken] #めちゃめちゃな文字列
     )
 
 
     subscription = Stripe::Subscription.create({
-      customer: customer.id, 
+      customer: customer.id,
       items: [{plan: plan.id}],
     })
 
