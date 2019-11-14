@@ -1,11 +1,10 @@
-	$(document).ready(function(){
-    $(".menu-trigger").click(function (){
-      console.log("ハンバーガー空いたよ")
-      $(".js-humberger_background").addClass("active");
-      $(".js-humberger").addClass("active");
-      // $('.js-humberger').each(function(i) {
-      //   $(this).delay(80 * i).addClass("active");
-      //   $(this).delay(80 * i).fadeIn(500);
-      // });
-    });
-  });
+// $(document).on("click", ".drawer-close", function(e) {
+//   console.log("ハンナ")
+//   e.preventDefault();
+//   // document.addEventListener('touchmove', function(e) {e.preventDefault();console.log(epreventDefault())}, {passive: false})
+// },  {passive: false});
+// $(document).on("click", ".drawer-open", function() {
+//   console.log("ハンナ")
+//   // $('html, body').toggleClass('fixed');
+//   document.addEventListener('touchmove', function(e) {e.preventDefault();console.log(epreventDefault())}, {passive: true})
+// });
