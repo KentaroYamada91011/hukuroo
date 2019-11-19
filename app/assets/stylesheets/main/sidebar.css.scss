@@ -11,3 +11,25 @@
     font-size: 14px;
   }
 }
+
+.js-taxonomies {
+  ul {
+    display: none;
+    opacity: 0;
+  }
+
+  span:after {
+    content: "+";
+  }
+
+  &.show {
+    ul {
+      display: block;
+      opacity: 1;
+    }
+
+    span:after {
+      content: "-";
+    }
+  }
+}
