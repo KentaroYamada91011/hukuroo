@@ -8,6 +8,9 @@ body {
 #wrapper {
 	display: grid;
 	margin: 38px;
+	@include sp {
+		margin: 0 38px 38px;
+	}
 }
 .container {
   width: 100%;

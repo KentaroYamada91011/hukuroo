@@ -68,8 +68,9 @@
     margin: auto;
     margin-bottom: 36px;
     @include sp {
-      height: 320px;
-      width: auto;
+      height: 220px;
+      width: 100%;
+      margin-top: 12px;
     }
   }
 }
