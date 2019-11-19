@@ -1131,7 +1131,7 @@ en:
     card_number: Card Number
     card_type: Brand
     card_type_is: Card type is
-    cart: カート
+    cart: レンタルカート
     cart_subtotal:
       one: Subtotal (1 item)
       other: Subtotal (%{count} items)
@@ -1318,7 +1318,7 @@ en:
         not_first_order: This coupon code can only be applied to your first order.
     email: メールアドレス
     empty: 空
-    empty_cart: カートは空です
+    empty_cart: レンタルカートを空にする
     enable_mail_delivery: Enable Mail Delivery
     end: End
     ending_in: Ending in
@@ -1556,7 +1556,7 @@ en:
     login_name: Login
     logout: Logout
     logs: Logs
-    look_for_similar_items: 似たアイテムを探す
+    look_for_similar_items: このアイテムを見ている人におすすめタグ
     make_refund: Make refund
     make_sure_the_above_reimbursement_amount_is_correct: Make sure the above reimbursement
       amount is correct
@@ -1730,7 +1730,7 @@ en:
       address: Address
       awaiting_return: Awaiting return
       canceled: Canceled
-      cart: カート
+      cart: レンタルカート
       complete: Complete
       confirm: Confirm
       delivery: Delivery
@@ -2033,7 +2033,7 @@ en:
         vat: incl. %{amount} %{tax_rate_name}
     shipping_total: Shipping total
     shop_by_taxonomy:  "%{taxonomy}"
-    shopping_cart: ショッピングカート
+    shopping_cart: レンタル用ショッピングカート月に一度2点までレンタルできます
     show: Show
     show_active: Show Active
     show_deleted: Show Deleted
@@ -2251,7 +2251,7 @@ en:
     year: Year
     you_cannot_undo_action: You will not be able to undo this action
     you_have_no_orders_yet: 頼んだ商品がありません
-    your_cart_is_empty: Your cart is empty
+    your_cart_is_empty: サブスク会員登録はお済みですか？レンタル用のカートは空か使用できません
     your_order_is_empty_add_product: Your order is empty. Please add products first.
     zip: Zip
     zipcode: Zip Code
