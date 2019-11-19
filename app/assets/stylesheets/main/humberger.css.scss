@@ -66,8 +66,8 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.container {
-  &.scrollLock {
-      display: none;
+.drawer-open{
+  .container {
+    display: none;
   }
 }
