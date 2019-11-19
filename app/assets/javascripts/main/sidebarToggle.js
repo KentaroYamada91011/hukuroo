@@ -1,5 +1,4 @@
-$(window).click(function(e) {
-  console.log($(e.target).hasClass("js-taxonomies"))
+$(window).click((e) => {
   if ($(e.target).hasClass("js-taxonomies")) {
     $(e.target).toggleClass('show');
   }
