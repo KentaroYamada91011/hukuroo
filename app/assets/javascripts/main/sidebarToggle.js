@@ -1,5 +1,5 @@
 $(window).click(function(e) {
-  if ($(e.target).hasClass("js-taxonomies")) {
-    $(e.target).toggleClass('show');
+  if ($(e.target).parent().hasClass("js-taxonomies")) {
+    $(e.target).parent().toggleClass('show');
   }
 });

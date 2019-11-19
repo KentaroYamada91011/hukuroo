@@ -1,5 +1,10 @@
 @import "../common/variables";
 .fronted__taxon__link {
+
+  span {
+    display: flex;
+    justify-content: space-between;
+  }
   @include font-hiragino-medium;
   padding:  12px 0;
   // &:first-child {
