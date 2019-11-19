@@ -1627,7 +1627,7 @@ en:
     new_user: New User
     new_variant: New Variant
     new_zone: New Zone
-    next: Next
+    next: 次へ
     no_actions_added: No actions added
     no_images_found: No images found
     no_inventory_selected: No inventory selected
@@ -1747,8 +1747,8 @@ en:
     overview: Overview
     package_from: package from
     pagination:
-      next_page: next page &raquo;
-      previous_page: "&laquo; previous page"
+      next_page: 次のページ &raquo;
+      previous_page: "&laquo; 前のページ"
       truncate: "&hellip;"
     password: パスワード
     paste: Paste
@@ -1804,7 +1804,7 @@ en:
     preference_source_using: Using static preferences "%{name}"
     preferred_reimbursement_type: Preferred Reimbursement Type
     presentation: Presentation
-    previous: Previous
+    previous: 前へ
     price: 価格
     price_range: Price Range
     price_sack: Price Sack
