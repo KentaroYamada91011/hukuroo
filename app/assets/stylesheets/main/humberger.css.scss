@@ -61,15 +61,13 @@
   }
 }
 .drawer--top.drawer-open .drawer-nav {
-  height: 100%;
   top: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-body {
+.container {
   &.scrollLock {
-    overflow: hidden;
-    min-height: 100vh;
+      position: fixed;
   }
 }

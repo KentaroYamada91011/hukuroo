@@ -1,3 +1,3 @@
 $(document).on("click", ".drawer-toggle", function() {
-  $('body').toggleClass('scrollLock');
+  $('.container').toggleClass('scrollLock');
 });
