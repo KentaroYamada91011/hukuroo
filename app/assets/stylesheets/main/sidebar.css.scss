@@ -38,3 +38,8 @@
     }
   }
 }
+#sidebar {
+  @include sp {
+    display: none;
+  }
+}
