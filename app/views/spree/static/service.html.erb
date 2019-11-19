@@ -9,7 +9,11 @@
             <span>洋服が借り放題</span>
           </h2>
           <div class="section-about__outline" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <p>返却期限がなく何度でも借りかえられる。
+            <%
+=begin%>
+ <p>返却期限がなく何度でも借りかえられる。 
+<%
+=end%>
               <br>気に入った洋服は割引価格で買い取り可能。
               <br>利用済みの洋服はクリーニング不要でそのまま返却。
             </p>
@@ -54,10 +58,10 @@
       <header class="section-item__header">
         <h2 class="section-item__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
           <span>借りられるアイテムは</span>
-          <span>全て新品</span>
+          <span>全て厳選したブランド古着</span>
         </h2>
         <div class="section-item__outline" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-          <p>earth music&amp;ecologyをはじめとした人気ブランドが勢揃い。定番から最新トレンドアイテムまで豊富な種類の中から、あなたのお気に入りの一着がきっと見つかる。</p>
+          <p>earth music&amp;ecologyをはじめとした人気古着が勢揃い。定番から最新トレンドアイテムまで豊富な種類の中から、あなたのお気に入りの一着がきっと見つかる。</p>
         </div>
       </header>
       <div class="section-item__content">
@@ -259,7 +263,7 @@
         <header class="section-plan__header">
           <h2 class="section-plan__title">
             <span>料金プラン</span>
-            <span class="small">はじめの3ヶ月、月額39円
+            <span class="small">月額4000円
               <span class="small">(税別)</span>
             </span>
           </h2>
@@ -269,9 +273,13 @@
             <dt class="section-plan__label">レンタル枠</dt>
             <dd class="section-plan__value">3</dd>
             <dt class="section-plan__label">買取割引</dt>
-            <dd class="section-plan__value">5%OFF</dd>
-            <dt class="section-plan__label">レンタル回数</dt>
-            <dd class="section-plan__value">無制限</dd>
+            <dd class="section-plan__value">20%OFF</dd>
+            <%
+=begin%>
+ <dt class="section-plan__label">レンタル回数</dt>
+            <dd class="section-plan__value">無制限</dd> 
+<%
+=end%>
             <dt class="section-plan__label">クリーニング</dt>
             <dd class="section-plan__value">不要</dd>
           </dl>
@@ -283,7 +291,7 @@
                 <span class="amount__suffix">（税別）</span>
               </p>
               <p>
-                <small>別途返却手数料:380円/1回(税別)</small>
+                <small>返却手数料:0円/1回(税別)</small>
               </p>
             </div>
           </div>
@@ -296,7 +304,7 @@
         <div class="section-plan__content">
           <ul class="section-plan__points">
             <li class="section-plan__point">
-              <h3 class="section-plan__point-title">新品だけ届く</h3>
+              <h3 class="section-plan__point-title">厳選したアイテムだけ届く</h3>
               <div class="section-plan__point-text">
                 <p>取扱う洋服は全て新品
                   <br>最新トレンドアイテムが届く
@@ -315,7 +323,7 @@
               <h3 class="section-plan__point-title">お気に入りは返さない</h3>
               <div class="section-plan__point-text">
                 <p>割引き価格で買い取るか
-                  <br>60日間借り続けてあなたのものに
+                  <br>30日間で返却
                 </p>
               </div>
             </li>
@@ -332,7 +340,9 @@
             <%= link_to '無料会員登録はこちら', spree.signup_path %>
           </h2>
         </header>
-        <div class="section-lifestyle__content">
+        <%
+=begin%>
+ <div class="section-lifestyle__content">
           <ol class="section-lifestyle__list">
             <li class="section-lifestyle__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
               <div class="section-lifestyle__item-inner" id="play_button1">
@@ -368,7 +378,9 @@
               </div>
             </li>
           </ol>
-        </div>
+        </div> 
+<%
+=end%>
       </div>
     </div>
   </section>
@@ -427,7 +439,9 @@
         </div> 
 <%
 =end%>
-        <footer class="section-download__footer">
+        <%
+=begin%>
+ <footer class="section-download__footer">
           <div class="download" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
             <ul class="download__list">
               <li class="download__item download__item--ios">
@@ -438,7 +452,9 @@
               </li>
             </ul>
           </div>
-        </footer>
+        </footer> 
+<%
+=end%>
       </div>
       <div class="section-download__image animate">
         <div class="section-download__image-photo">&nbsp;</div>
