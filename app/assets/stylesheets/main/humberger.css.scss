@@ -61,7 +61,7 @@
   }
 }
 .drawer--top.drawer-open .drawer-nav {
-  top: 0;
+  top: -2px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -71,3 +71,23 @@
     display: none;
   }
 }
+button.drawer-toggle {
+  @include pc {
+    display: none;
+  }
+}
+.drawer .drawer-hamburger-icon,
+.drawer .drawer-hamburger-icon::after,
+.drawer .drawer-hamburger-icon::before {
+    background-color: #fff;
+}
+
+.drawer-open .drawer-hamburger-icon::after,
+.drawer-open .drawer-hamburger-icon::before {
+    background-color: #2b2b2b;
+}
+// .drawer-open .drawer-hamburger-icon,
+// .drawer-open .drawer-hamburger-icon::after,
+// .drawer-open .drawer-hamburger-icon::before {
+//     background-color: #3f3;
+// }
