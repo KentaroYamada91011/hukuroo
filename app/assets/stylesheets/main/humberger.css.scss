@@ -68,6 +68,6 @@
 
 .container {
   &.scrollLock {
-      position: fixed;
+      display: none;
   }
 }
