@@ -8,13 +8,13 @@
     <dd>
       <% if spree_current_user.try(:user_billing).try(:expired_date).present? && spree_current_user.try(:user_billing).try(:expired_date) < Date.today %>
         サブスクリプション期間の期限が切れています
-        <%= link_to "登録ページへ","/charges/new" %>
+        <%= link_to "サブスク登録ページへ","/charges/new" %>
       <% elsif spree_current_user.try(:user_billing).try(:ticket_number) == 0 %>
         レンタル数の上限に達したためレンタルできません
       <% elsif  current_spree_user&.user_billing&.is_billing? %>
         サブスクリプション会員登録済み
       <% else %>
-        <%= link_to "登録ページへ","/charges/new" %>
+        <%= link_to "サブスク登録ページへ","/charges/new" %>
       <% end %>
     </dd>
 
@@ -25,7 +25,7 @@
       <% else %>
         サブスクリプション未登録
         <br>
-        <%= link_to "登録ページへ","/charges/new" %>
+        <%= link_to "サブスク登録ページへ","/charges/new" %>
       <% end %> 
 <%
 =end%>

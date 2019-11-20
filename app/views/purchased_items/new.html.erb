@@ -1,0 +1,68 @@
+<h1>new purchase</h1>
+<h2><%= @product.name %></h2>
+<h2><%= @product.description %></h2>
+<h2>値段</h2>
+<h2><%= @product.price.to_i %></h2>
+<%= form_tag product_purchased_items_path do %>
+  <article>
+    <table class="fronted__charges__table">
+    <tr>
+      <th>無料プラン</th>
+      <th class="popular">初級プラン</span></th>
+      <%
+=begin%>
+ <th>上級プラン</th> 
+<%
+=end%>
+    </tr>
+    <tr>
+      <td>¥0</td>
+      <td class="popular">
+        ¥<%= @amount %>
+      </td>
+      <%
+=begin%>
+ <td>¥8,000</td> 
+<%
+=end%>
+    </tr>
+    <tr>
+      <td><a href="#">申し込み済み</a></td>
+      <td>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          <%
+=begin%>
+ <span>Amount: 4000円</span> 
+<%
+=end%>
+        </label>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-amount=<%= @amount %>
+        data-currency="jpy"
+        data-description="クレジット決済"
+        data-locale="auto"></script>
+      </td>
+      <%
+=begin%>
+ <td><a href="#">申し込み</a></td> 
+<%
+=end%>
+    </tr>
+    <tr>
+      <td>保証なし</td>
+      <td class="popular">保証1ヶ月</td>
+      <%
+=begin%>
+ <td>保証3ヶ月</td> 
+<%
+=end%>
+    </tr>
+  </table>
+  </article>
+<% end %>

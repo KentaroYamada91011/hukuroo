@@ -54,6 +54,7 @@
             レンタルカートへ入れる
           <% end %>
         </div>
+        <%= link_to "購入画面へ" , main_app.new_product_purchased_item_path(@product.id), class: "large primary" %>
       </div>
     <% else %>
         <div id="product-price">
