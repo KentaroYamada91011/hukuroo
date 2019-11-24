@@ -17,6 +17,15 @@
     }
   }
   &__perchaseButton {
-    
+    padding: 7px 10px;
+    font-size: 14px;
+    background-color: #ababab;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+    color: #fff;
+  }
+
+  &__perchaseButton:hover {
+    color: #fff;
   }
 }
