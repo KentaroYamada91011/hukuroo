@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Solidus relies on it being the default of "spree"
   mount Spree::Core::Engine, at: '/'
   resources :charges,  only: %i(new create)
+  
   get '/corporate'      => 'spree/static#corporate'
   get '/terms'          => 'spree/static#terms'
   get '/success'        => 'spree/static#success'
