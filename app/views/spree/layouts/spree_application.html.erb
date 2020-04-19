@@ -17,6 +17,9 @@
 
       <%= render partial: 'spree/shared/header' %>
 
+      <%if @top_page.present?%>
+        <div class="fronted__background"></div>
+      <%end%>
       <div id="wrapper" class="row" data-hook>
 
         <%= taxon_breadcrumbs(@taxon) %>
@@ -24,7 +27,7 @@
 
         <div class="fronted__wrapper">
 
-          <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
+          <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar and !@top_page.present? %>
 
           <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega" %>" data-hook>
             <%= flash_messages %>

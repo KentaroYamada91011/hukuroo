@@ -2,14 +2,13 @@
 body {
   margin: 0;
   padding: 0;
-  margin-top: 80px;
 }
 
 #wrapper {
 	display: grid;
-	margin: 38px;
+	margin: 80px 38px 38px;
 	@include sp {
-		margin: 0 38px 38px;
+		margin: 80px 38px 38px;
 	}
 }
 .container {
