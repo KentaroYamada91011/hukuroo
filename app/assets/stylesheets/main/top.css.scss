@@ -63,6 +63,26 @@
   &__items {
     .product-listing {
       margin-top: 64px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .pagination {
+      display: none;
+    }
+  }
+  &__more {
+    width: 100%;
+    margin-top: 24px;
+    text-align: center;
+    .button-fukuroo {
+      margin: auto;
+      padding: 10px 32px;
+    }
+    .button-fukuroo::after {
+      content: "\f054";
+      font-family: FontAwesome;
+      margin-left: 4px;
+      line-height: 14px;
     }
   }
 }

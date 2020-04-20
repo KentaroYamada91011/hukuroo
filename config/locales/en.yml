@@ -698,7 +698,7 @@ en:
         other: Promotion Code Batches
       spree/property:
         one: Property Type
-        other: Property Types
+        other: 商品タイプ
       spree/refund:
         one: Refund
         other: Refunds
@@ -971,7 +971,7 @@ en:
         products: Products
         promotion_categories: Promotion Categories
         promotions: Promotions
-        properties: Property Types
+        properties: 商品タイプ
         rma: RMA
         settings: Settings
         shipping: Shipping
@@ -1854,7 +1854,7 @@ en:
     promotionable: Promotable
     promotions: Promotions
     propagate_all_variants: Propagate all variants
-    properties: Property Types
+    properties: 商品タイプ
     property: Property Type
     provider: Provider
     qty: 数量

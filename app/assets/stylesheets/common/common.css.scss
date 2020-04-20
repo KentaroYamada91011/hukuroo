@@ -34,8 +34,11 @@ li {
 }
 
 input[type="submit"],input[type="submit"], input[type="button"], input[type="reset"], button, a.button {
-  background-color: #ababab;
-  border: 1px solid $border-black;
+	// padding: 10px 32px;
+	background-color: #fff;
+	color: #bbb;
+	border-radius: 100px;
+  border: 1px solid #bbb;
   box-shadow: none;
 }
 
@@ -86,4 +89,21 @@ input[type="submit"],input[type="submit"], input[type="button"], input[type="res
 .select-custom.sl-c1 select {
 	padding: 8px 38px 8px 8px;
 	color: #666666;
+}
+.container .twelve.columns {
+	width: 900px;
+}
+.container .three.columns {
+	width: 160px;
+	margin: 0;
+}
+ul#products li .product-image {
+	border: none;
+}
+ul#products li a.info {
+	border: none;
+}
+
+.fronted__content__item {
+	border: solid 1px #e1e1e1;
 }
