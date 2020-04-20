@@ -26,10 +26,6 @@
       line-height: 52px;
       color: #2b2b2b;
       @include font-hiragino-bold;
-
-      &:hover {
-        color: $text-highWhite;
-      }
     }
   }
 

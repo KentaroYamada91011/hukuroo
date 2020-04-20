@@ -54,6 +54,17 @@
     height: 240px;
     object-fit: cover;
   }
+  &__line {
+    position: absolute;
+    margin-top: 32px;
+    width: 100vw;
+    left: 0;
+  }
+  &__items {
+    .product-listing {
+      margin-top: 64px;
+    }
+  }
 }
 
 #slider {
