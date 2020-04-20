@@ -6,23 +6,23 @@
 
 <div data-hook="homepage_products">
   <h2 class="fronted__top__title">さがす</h2>
-  <ul id="nav-bar" class="front__header__content js-humberger" data-hook>
-    <li id="search-bar" data-hook>
+  <ul id="nav-bar" class="js-humberger" data-hook>
+    <li id="search-bar" class="fronted__top__search" data-hook>
       <%= render partial: 'spree/shared/search' %>
     </li>
   </ul>
   <ul id="slider">
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
-    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "front__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
+    <li><a href="#"><%= image_tag 'tags/fashion.jpg', class: "fronted__top__image__content" %></a></li>
   </ul>
-  <h2 class="fronted__top__title">新着アイテム</h2>
+  <h2 class="fronted__top__title fronted__top__title-new">新着アイテム</h2>
     <%= render partial: 'spree/shared/products', locals: { products: @products } %>
   <h2 class="fronted__top__title">人気アイテム</h2>
     <%= render partial: 'spree/shared/products', locals: { products: @products } %>

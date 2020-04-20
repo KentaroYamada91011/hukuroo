@@ -40,6 +40,7 @@
 }
 .drawer-nav {
   text-align: center;
+  z-index: 1000;
   li {
     margin: 12px 0;
     a {
@@ -61,6 +62,7 @@
   }
 }
 .drawer--top.drawer-open .drawer-nav {
+  padding: 0 10%;
   top: -2px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -72,14 +74,12 @@
   }
 }
 button.drawer-toggle {
-  @include pc {
-    display: none;
-  }
+  right: 10%!important;
 }
 .drawer .drawer-hamburger-icon,
 .drawer .drawer-hamburger-icon::after,
 .drawer .drawer-hamburger-icon::before {
-    background-color: #fff;
+    background-color: #2b2b2b;
 }
 
 .drawer-open .drawer-hamburger-icon::after,

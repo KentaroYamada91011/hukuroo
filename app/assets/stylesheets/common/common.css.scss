@@ -6,7 +6,7 @@ body {
 
 #wrapper {
 	display: grid;
-	margin: 80px 38px 38px;
+	margin: 90px 38px 38px;
 	@include sp {
 		margin: 80px 38px 38px;
 	}
@@ -44,7 +44,7 @@ input[type="submit"],input[type="submit"], input[type="button"], input[type="res
 .select-custom {
 	overflow: hidden;
 	width: 90%;
-	margin: 2em auto;
+	// margin: 2em auto;
 	text-align: center;
 }
 .select-custom select {

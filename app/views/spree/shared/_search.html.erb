@@ -9,5 +9,7 @@
     <% end %>
   </div>
   <%= search_field_tag :keywords, params[:keywords], placeholder: t('spree.search') %>
-  <%= submit_tag "探す", name: nil %>
+  <%= button_tag :type => "submit", :class =>"search-icon", name: nil  do %>
+    <i class="fa fa-search" style="color: #2b2b2b"></i>
+  <% end %>
 <% end %>

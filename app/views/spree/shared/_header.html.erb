@@ -1,21 +1,17 @@
 <header id="header" class="row front__header__wrapper js-humberger_background" data-hook>
-  <div id="home-link" class="front__header__logo" data-hook><%= link_to "フクロー", spree.root_path %></div>
-  <ul id="nav-bar" class="front__header__content js-humberger" data-hook>
-    <li id="search-bar" data-hook>
-      <%= render partial: 'spree/shared/search' %>
-    </li>
-  </ul>
-  <ul class="js-humberger">____________________________________________</ul>
-  <ul id="mainNav-bar" class="front__header__content js-humberger" data-hook>
-    <li id="link-to-cart" data-hook>
-      <%= link_to "カート", spree.cart_link_path %>
-      <noscript>
-        <%= link_to "カート", spree.cart_link_path %>
-      </noscript>
-      &nbsp;
-      <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
-    </li>
-    <%= render 'spree/shared/locale_selector' %>
-    <%= render 'spree/shared/login_bar_items' %>
-  </ul>
+  <div class='front__header__content'>
+    <div id="home-link" class="front__header__logo" data-hook><%= link_to "フクロー", spree.root_path %></div>
+    <ul id="mainNav-bar" class="front__header__ul js-humberger" data-hook>
+      <li id="link-to-cart2" data-hook>
+        <%= link_to "レンタルカート", spree.cart_link_path %>
+        <noscript>
+          <%= link_to "レンタルカート", spree.cart_link_path %>
+        </noscript>
+        &nbsp;
+        <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
+      </li>
+      <%= render 'spree/shared/locale_selector' %>
+      <%= render 'spree/shared/login_bar_items' %>
+    </ul>
+  </div>
 </header>
