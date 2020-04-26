@@ -8,6 +8,9 @@
   border-bottom: solid 1px #e1e1e1;
   top: -80px;
   z-index: -1;
+  @include sp {
+    display: none;
+  }
 }
 
 .fronted__top {
@@ -15,14 +18,24 @@
     margin-top: 48px;
     text-align: center;
     font-size: 28px;
+    @include sp {
+      margin-top: 24px;
+      font-size: 20px;
+    }
     &-new {
-      margin-top: 320px;      
+      margin-top: 320px;
+      @include sp {
+        margin-top: 184px;
+      }     
     }
   }
   &__search {
     position: relative;
     width: 500px;
     margin: 32px auto;
+    @include sp {
+      width: 100%;
+    }
     form {
       display: contents!important;
     }
@@ -53,6 +66,9 @@
     width: 100%;
     height: 240px;
     object-fit: cover;
+    @include sp {
+      height: 120px;
+    }
   }
   &__line {
     position: absolute;
@@ -64,10 +80,25 @@
     .product-listing {
       margin-top: 64px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
+      @include sp {
+        justify-content: center;
+      }
+
     }
     .pagination {
       display: none;
+    }
+    @include sp {
+      display: none;
+    }
+    &--sp {
+      display: none;
+      @include sp {
+        display: block;
+        margin: 0;
+      }
     }
   }
   &__more {
@@ -109,6 +140,9 @@
   z-index: 10;
   background: none;
   border: none;
+  @include sp {
+    top: 30%;
+  }
 }
 .slick-arrow:hover {
   background: none;
@@ -118,7 +152,9 @@
 .slick-next {
   content: "" !important;
   right: 25%;
-  // display: none;
+  @include sp {
+    right: 2%;
+  }
 }
 .slick-next::after {
   content: "\f054";
@@ -127,7 +163,9 @@
 .slick-prev {
   content: "" !important;
   left: 25%;
-  // display: none;
+  @include sp {
+    left: 2%;
+  }
 }
 .slick-prev::after {
   content: "\f053";

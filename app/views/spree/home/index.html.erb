@@ -6,7 +6,7 @@
 
 <div data-hook="homepage_products">
   <h2 class="fronted__top__title">さがす</h2>
-  <ul id="nav-bar" class="js-humberger" data-hook>
+  <ul id="nav-bar" data-hook>
     <li id="search-bar" class="fronted__top__search" data-hook>
       <%= render partial: 'spree/shared/search' %>
     </li>
@@ -27,11 +27,17 @@
   <div class='fronted__top__items'>
     <%= render partial: 'spree/shared/products', locals: { products: @products } %>
   </div>
+  <div class='fronted__top__items fronted__top__items--sp'>
+    <%= render partial: 'spree/shared/products', locals: { products: @products_sp } %>
+  </div>
   <div class="fronted__top__more"><%= link_to "もっとみる", products_path, class: 'button button-fukuroo' %></div>
   <h2 class="fronted__top__title">人気アイテム</h2>
   <hr class='fronted__top__line' />
   <div class='fronted__top__items'>
     <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+  </div>
+  <div class='fronted__top__items fronted__top__items--sp'>
+    <%= render partial: 'spree/shared/products', locals: { products: @products_sp } %>
   </div>
   <div class="fronted__top__more"><%= link_to "もっとみる", products_path, class: 'button button-fukuroo' %></div>
   <h2 class="fronted__top__title">カテゴリー</h2>

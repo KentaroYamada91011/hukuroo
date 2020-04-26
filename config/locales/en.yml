@@ -698,7 +698,7 @@ en:
         other: Promotion Code Batches
       spree/property:
         one: Property Type
-        other: 商品タイプ
+        other: 商品サイズ
       spree/refund:
         one: Refund
         other: Refunds
@@ -971,7 +971,7 @@ en:
         products: Products
         promotion_categories: Promotion Categories
         promotions: Promotions
-        properties: 商品タイプ
+        properties: 商品サイズ
         rma: RMA
         settings: Settings
         shipping: Shipping
@@ -1556,7 +1556,7 @@ en:
     login_name: Login
     logout: Logout
     logs: Logs
-    look_for_similar_items: このアイテムを見ている人におすすめタグ
+    look_for_similar_items: タグ
     make_refund: Make refund
     make_sure_the_above_reimbursement_amount_is_correct: Make sure the above reimbursement
       amount is correct
@@ -1854,7 +1854,7 @@ en:
     promotionable: Promotable
     promotions: Promotions
     propagate_all_variants: Propagate all variants
-    properties: 商品タイプ
+    properties: 商品サイズ
     property: Property Type
     provider: Provider
     qty: 数量

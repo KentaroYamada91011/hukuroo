@@ -12,6 +12,7 @@
   font-weight: 700;
   src: url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosansjp/v5/NotoSansJP-Bold.otf) format("opentype")
 }
+@import "../common/variables";
 
 
 /*!
@@ -179,6 +180,21 @@ button, input, select, textarea {
 select {
   -moz-appearance: none;
   -webkit-appearance: none
+}
+#search-bar select {
+  @include sp {
+    margin-bottom: 0;
+  }
+}
+ul#nav-bar  {
+  @include sp {
+    margin: 0 32px;
+  }
+}
+nav#taxonomies  {
+  @include sp {
+    margin: 0 32px;
+  }
 }
 
 select::-ms-expand {

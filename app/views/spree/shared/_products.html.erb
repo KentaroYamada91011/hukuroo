@@ -30,7 +30,10 @@
           <div class="product-image fronted__content__image">
             <%= link_to(render('spree/shared/image', image: product.gallery.images.first, size: :product, itemprop: "image"), url, itemprop: 'url') %>
           </div>
-          <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
+          
+          <%= link_to url, class: 'info', itemprop: "name", title: product.name do %>
+            <span class="fronted__content__categories">メンズ</span><%= truncate(product.name, length: 50)%>
+          <% end %>
         <% end %>
       </li>
     <% end %>

@@ -6,9 +6,30 @@
     a {
       img {
         width: -webkit-fill-available;
+        height: 180px;
         height: -webkit-fill-available;
         object-fit: cover;
       }
+    }
+    @include sp {
+      height: 130px;
+      a {
+        height: max-content;
+        img {
+          height: 130px;
+        }
+      }
+    }
+  }
+  &__categories {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 0 8px;
+    background-color: #1DA1F2;
+    border-radius: 100px;
+    color: #fff;
+    &--ladies {
+      background-color: red;
     }
   }
   &__taxons {
