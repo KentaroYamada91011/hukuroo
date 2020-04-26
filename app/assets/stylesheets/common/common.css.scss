@@ -19,7 +19,9 @@ body {
 
 .fronted__wrapper {
 	#content {
-		width: 100%;
+		@include sp {
+			width: 100%;
+		}
 	}
   @include pc {
 		display: flex;
