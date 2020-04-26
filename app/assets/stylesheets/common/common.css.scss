@@ -18,6 +18,9 @@ body {
 
 
 .fronted__wrapper {
+	#content {
+		width: 100%;
+	}
   @include pc {
 		display: flex;
 		margin-top: 40px;
@@ -137,7 +140,7 @@ ul#products li {
 	border: none;
 	background-color: #FFFFFF;
 	@include sp {
-		width: 300px;
+		width: 100%;
 		height: 200px;
 	}
 	img {

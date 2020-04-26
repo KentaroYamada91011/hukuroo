@@ -1,7 +1,7 @@
 @import "../common/variables";
 .fronted__taxon__link {
-
   span {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
   }
