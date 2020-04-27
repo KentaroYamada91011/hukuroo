@@ -33,20 +33,27 @@
           <div id="cart-form" data-hook="cart_form">
             <%= render partial: 'cart_form' %>
           </div>
-          
-          <div data-hook="product_properties">
-            <%= render partial: 'properties' %>
-          </div>
 
         </div>
+        <div data-hook="product_properties">
+          <%= render partial: 'properties' %>
+        </div>
         <div class="product-description" itemprop="description" data-hook="description">
-          <h6 class="product-section-title">商品説明</h6>
+          <h6 class="product-description-title">商品説明</h6>
           <p><%= product_description(@product) rescue t('spree.product_has_no_description') %></p>
         </div>
 
-        //ここに関連アイテム一覧を作る
       </div>
     </div>
-
   </div>
+    <div class='product-related' >
+      <h2 class="fronted__top__title product-related-title">関連アイテム</h2>
+      <div class='fronted__top__items'>
+        <%= render partial: 'spree/shared/products', locals: { products: @related_products } %>
+      </div>
+      <div class='fronted__top__items fronted__top__items--sp'>
+        <%= render partial: 'spree/shared/products', locals: { products: @related_products_sp } %>
+      </div>
+      <div class="fronted__top__more fronted__top__more--related"><%= link_to "もっとみる", products_path, class: 'button button-fukuroo' %></div>
+    </div>
 <% end %>

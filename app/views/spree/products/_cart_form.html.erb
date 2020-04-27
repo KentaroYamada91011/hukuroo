@@ -32,7 +32,7 @@
       <div data-hook="product_price" class="product-price-wrapper <%= !@product.has_variants? ? 'alpha' : 'omega' %>">
 
         <div id="product-price">
-          <div>
+          <div class="product-price-buttons">
             <span class="price selling" itemprop="price" content="<%= @product.price_for(current_pricing_options).to_d %>">
               <%= display_price(@product) %>(税込)
             </span>
@@ -50,7 +50,7 @@
         <div class="add-to-cart">
           <%= number_field_tag :quantity, 1, class: 'title', min:1, max: 1 %>
           <%= button_tag class: 'large primary', class: 'add-to-cart-button add-to-cart-button--blue', type: :submit do %>
-            レンタルカートする
+            レンタルする
           <% end %>
           <%= link_to "購入へ" , main_app.new_product_purchased_item_path(@product.id), class: 'add-to-cart-button add-to-cart-button--red' %>
         </div>

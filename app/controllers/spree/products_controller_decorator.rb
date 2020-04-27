@@ -7,6 +7,7 @@ Spree::ProductsController.class_eval do
   end
 
   def show
+    @searcher = build_searcher(params.merge(include_images: true))
     @variants = @product.
       variants_including_master.
       display_includes.
@@ -14,6 +15,8 @@ Spree::ProductsController.class_eval do
       includes([:option_values, :images])
 
     @product_properties = @product.product_properties.includes(:property)
+    @related_products = @searcher.retrieve_products_custom.limit(5)
+    @related_products_sp = @searcher.retrieve_products_custom.limit(6)
     @taxon = Spree::Taxon.find(params[:taxon_id]) if params[:taxon_id]
   end
 end
