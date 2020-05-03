@@ -1,0 +1,8 @@
+<div class="fronted__account__page">
+  <%= image_tag('logo.png') %>
+  <h3>ベーシックプラン</h3>
+  <div class='fronted__account__rentalWrapper'>
+    <div class='fronted__account__rentalTitle'>今月のレンタル可能数</div>
+    <div class='fronted__account__rentalNumber'><%=spree_current_user.try(:user_billing).try(:ticket_number)%>/2回</div>
+  </div>
+</div>

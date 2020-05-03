@@ -1,0 +1,75 @@
+.fronted {
+  &__account{
+    &__left {
+      width: 30%;
+      margin-right: 10%;
+      ul {
+        background: #fff;
+        // border: solid 1px #d9d9d9;
+        margin-bottom: 16px;
+      }
+      li {
+        border: solid 1px #d9d9d9;
+        text-align: left;
+        padding: 8px;
+        a {
+          color: #555;
+        }
+      }
+      &__title {
+        color: #999;
+      }
+    }
+    &__right {
+      width: 60%;
+    }
+    &__wrapper {
+      margin: 0!important;
+      padding: 90px 38px 38px;
+      background-color: #f9f9f9;
+    }
+    &__page {
+      position: relative;
+      background: #fff;
+      background-image: image-url('tags/background.png');      
+      height: 340px;
+      width: 100%;
+      z-index: 10;
+      border-bottom: solid 1px #d9d9d9;
+      text-align: center;
+      img {
+        width: 160px;
+        margin-top: 64px;
+      }
+    }
+    &__rental {
+      &Wrapper {
+        display: flex;
+        margin: 20px auto;
+        width: 240px;
+        border: solid 2px #48be8a;
+        border-radius: 20px;
+      }
+      &Title {
+        width: 50%;
+        text-align: center;
+        font-size: 10px;
+        padding: 4px 2px;
+        background-color: #48be8a;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 20px 0 0 20px;
+      }
+      &Number {
+        width: 50%;
+        text-align: center;
+        padding: 4px 2px;
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
+    }
+    &__content {
+      display: flex;
+    }
+  }
+}
