@@ -3,11 +3,13 @@
 	<span class="drawer-hamburger-icon"></span>
 </button>
 <nav class="drawer-nav">
+  <h2 class="fronted__top__title">さがす</h2>
+  <ul id="nav-bar" data-hook>
+      <li id="search-bar" class="fronted__top__search" data-hook>
+        <%= render partial: 'spree/shared/search' %>
+      </li>
+  </ul>
 	<ul class="drawer-menu">
-    <li></li>
-		<li>
-			<%= render partial: 'spree/shared/search' %>
-		</li>
 		<li id="link-to-cart" data-hook>
       <%= link_to "カート", spree.cart_link_path %>
       <noscript>

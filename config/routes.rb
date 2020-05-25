@@ -21,7 +21,9 @@ Rails.application.routes.draw do
     resources :purchased_items,  only: %i(new create), controller: 'purchased_items'
   end
 
-  get '/account/address'        => 'spree/users#address'
+  namespace :account do
+    get '/address'         => 'spree/user#address'
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

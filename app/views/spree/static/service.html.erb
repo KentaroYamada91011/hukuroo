@@ -1,464 +1,77 @@
-<h1>フクロー</h1>
 <div class="page-top__content">
-  <section class="section-about" id="section-about">
-    <div class="section-about__inner">
-      <div class="section-about__body">
-        <header class="section-about__header">
-          <h2 class="section-about__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <span>月額定額制で</span>
-            <span>洋服が借り放題</span>
-          </h2>
-          <div class="section-about__outline" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <%
-=begin%>
- <p>返却期限がなく何度でも借りかえられる。 
-<%
-=end%>
-              <br>気に入った洋服は割引価格で買い取り可能。
-              <br>利用済みの洋服はクリーニング不要でそのまま返却。
-            </p>
-          </div>
-        </header>
-        <div class="section-about__content">
-          <div class="section-about__image">
-            <div class="section-about__image-frame image-animation animate">
-              <div class="section-about__image-photo" style="transform: translate3d(0px, -226.765px, 0px);">&nbsp;</div>
-            </div>
-          </div>
-          <div class="section-about__amount" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <p>はじめの3ヶ月、月額39円
-              <span class="small">(税別)</span>
-            </p>
-            <div class="amount">
-              <p>
-                <span class="amount__prefix">月額</span>
-                <span class="amount__value">￥4,000</span>
-                <span class="amount__suffix">（税込）</span>
-              </p>
-              <%
-=begin%>
- <p>
-                <small>別途返却手数料:380円/1回(税別)</small>
-              </p> 
-<%
-=end%>
-            </div>
-          </div>
-          <div class="section-about__image">
-            <div class="section-about__image-frame image-animation image-animation--right animate">
-              <div class="section-about__image-photo" style="transform: translate3d(0px, -160.654px, 0px);">&nbsp;</div>
-            </div>
-          </div>
+  <section class="">
+    <div class='page-top__icon'>
+      <%= image_tag 'logo.png', class: 'page-top__image'%>
+      <div class='page-top__head page-top__head--first'>フクローの使い方</div>
+      <div class='page-top__line'></div>
+    </div>
+    <div class='page-top__imeges'>
+      <div class='page-top__imageWrapper'>
+        <%= image_tag 'icon/icon1', class: 'page-top__image--first'%>
+        <div class='page-top__images__description'>月額定額制の洋服レンタルサービスです</div>
+      </div>
+      <div class='page-top__imageWrapper'>
+        <%= image_tag 'icon/icon2', class: 'page-top__images__image'%>
+        <div class='page-top__images__description'>毎月2点まで借りることができ、</div>
+        <div class='page-top__images__description'>洋服を返却して新しい洋服を借りられます。</div>
+        <div class='page-top__images__description'>クリーニングや返送料金は0円です。*月額会員のみ</div>
+      </div>
+      <div class='page-top__imageWrapper'>
+        <%= image_tag 'icon/icon3', class: 'page-top__images__image'%>
+        <div class='page-top__images__description'>借りたもので気に入ったものであれば</div>
+        <div class='page-top__images__description'>そのまま購入することもできます。</div>
+      </div>
+      <div class='page-top__line'></div>
+    </div>
+    <div class='page-top__use page-top__section'>
+      <div class='page-top__head'>フクローの使い方</div>
+      <div class='page-top__subtitle'>3つのステップで使い方を説明</div>
+      <div class='page-top__use__imageWrapper'>
+        <div class='page-top__use__image'>
+          <div class='page-top__use__step'>STEP1</div>
+          <%= image_tag 'logo.png', class: 'page-top__image'%>
+          <div class='page-top__use__description'>お使いのPC、スマホから洋服を選択する</div>
+        </div>
+        <div class='page-top__use__image '>
+          <div class='page-top__use__step'>STEP2</div>
+          <%= image_tag 'logo.png', class: 'page-top__image'%>
+          <div class='page-top__use__description'>届いた洋服でオシャレに</div>
+          <div class='page-top__use__description'>気に入った洋服があれば、そのまま購入可能</div>
+        </div>
+        <div class='page-top__use__image'>
+          <div class='page-top__use__step'>STEP3</div>
+          <%= image_tag 'logo.png', class: 'page-top__image'%>
+          <div class='page-top__use__description'>1ヶ月借りた洋服を返却</div>
+          <div class='page-top__use__description'>次に借りた洋服を選択</div>
         </div>
       </div>
+      <div class='page-top__line'></div>
+    </div> 
+    <div class='page-top__prices page-top__section'>
+      <div class='page-top__head'>料金</div>
+      <div class='page-top__subtitle'>1ヶ月間の月額定額制料金となります</div>
+      <div class='page-top__price'>
+        <div class='page-top__price--left'>1ヶ月の料金</div>
+        <div class='page-top__price--right'>4500円</div>
+      </div>
+      <div class='page-top__price'>
+        <div class='page-top__price--left'>1ヶ月のレンタル可能数</div>
+        <div class='page-top__price--right'>2点</div>
+      </div>
+      <%#<% if spree_current_user
+        <%#<%= link_to "サブスク登録ページへ","/charges/new" %>
+      <%#<% end %>
+      <div class='page-top__line'></div>
     </div>
-  </section>
-  <nav class="section-item" id="section-items">
-    <div class="section-item__inner">
-      <header class="section-item__header">
-        <h2 class="section-item__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-          <span>借りられるアイテムは</span>
-          <span>全て厳選したブランド古着</span>
-        </h2>
-        <div class="section-item__outline" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-          <p>earth music&amp;ecologyをはじめとした人気古着が勢揃い。定番から最新トレンドアイテムまで豊富な種類の中から、あなたのお気に入りの一着がきっと見つかる。</p>
-        </div>
-      </header>
-      <div class="section-item__content">
-        <ul class="section-item__list">
-          <li class="section-item__item">
-            <span class="section-item__item-trigger" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-item__image">
-                <div class="section-item__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_item1.jpg?rel=1570504688122);">&nbsp;</div>
-              </div>
-              <div class="section-item__brand">
-                <span>koe</span>
-              </div>
-            </span>
-          </li>
-          <li class="section-item__item">
-            <span class="section-item__item-trigger" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-item__image">
-                <div class="section-item__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_item2.jpg?rel=1570504688122);">&nbsp;</div>
-              </div>
-              <div class="section-item__brand">
-                <span>SEVENDAYS=SUNDAY</span>
-              </div>
-            </span>
-          </li>
-          <li class="section-item__item">
-            <span class="section-item__item-trigger" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-item__image">
-                <div class="section-item__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_item3.jpg?rel=1570504688122);">&nbsp;</div>
-              </div>
-              <div class="section-item__brand">
-                <span>earth music&amp;ecology</span>
-              </div>
-            </span>
-          </li>
-          <li class="section-item__item">
-            <span class="section-item__item-trigger" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-item__image">
-                <div class="section-item__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_item4.jpg?rel=1570504688122);">&nbsp;</div>
-              </div>
-              <div class="section-item__brand">
-                <span>YECCA VECCA</span>
-              </div>
-            </span>
-          </li>
-          <li class="section-item__item">
-            <span class="section-item__item-trigger" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-item__image">
-                <div class="section-item__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_item5.jpg?rel=1570504688122);">&nbsp;</div>
-              </div>
-              <div class="section-item__brand">
-                <span>CRAFT STANDARD BOUTIQUE</span>
-              </div>
-            </span>
-          </li>
-          <li class="section-item__item">
-            <span class="section-item__item-trigger" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-item__image">
-                <div class="section-item__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_item6.jpg?rel=1570504688122);">&nbsp;</div>
-              </div>
-              <div class="section-item__brand">
-                <span>Green Parks</span>
-              </div>
-            </span>
-          </li>
-          <li class="section-item__item">
-            <span class="section-item__item-trigger" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-item__image">
-                <div class="section-item__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_item7.jpg?rel=1570504688122);">&nbsp;</div>
-              </div>
-              <div class="section-item__brand">
-                <span>AMERICAN HOLIC</span>
-              </div>
-            </span>
-          </li>
-          <li class="section-item__item">
-            <span class="section-item__item-trigger" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-item__image">
-                <div class="section-item__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_item8.jpg?rel=1570504688122);">&nbsp;</div>
-              </div>
-              <div class="section-item__brand">
-                <span>E hyphen world gallery</span>
-              </div>
-            </span>
-          </li>
-        </ul>
-      </div>
-      <footer class="section-item__footer">
-        <a class="section-item__footer-trigger" id="btn-item-view-more" href="/web/list/coord?brandId=CC010" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">VIEW MORE</a>
-      </footer>
-    </div>
-  </nav>
-  <nav class="section-style" id="section-style">
-    <div class="section-style__inner">
-      <div class="section-style__body">
-        <header class="section-style__header">
-          <h2 class="section-style__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <span>様々なシーンに対応できる</span>
-            <span>豊富なスタイル</span>
-          </h2>
-        </header>
-        <div class="section-style__content">
-          <ul class="section-style__list">
-            <li class="section-style__item">
-              <span class="section-style__item-trigger">
-                <div class="section-style__item-title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                  <small>Office Style</small>
-                  <span>オフィススタイル</span>
-                </div>
-                <div class="section-style__image image-animation animate">
-                  <div class="section-style__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_style1.jpg?rel=1570504688122);"></div>
-                </div>
-              </span>
-            </li>
-            <li class="section-style__item">
-              <span class="section-style__item-trigger">
-                <div class="section-style__item-title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                  <small>Private Style</small>
-                  <span>プライベートスタイル</span>
-                </div>
-                <div class="section-style__image image-animation image-animation--right animate">
-                  <div class="section-style__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_style2.jpg?rel=1570504688122);"></div>
-                </div>
-              </span>
-            </li>
-            <li class="section-style__item">
-              <span class="section-style__item-trigger">
-                <div class="section-style__item-title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                  <small>Occasion Style</small>
-                  <span>オケージョンスタイル</span>
-                </div>
-                <div class="section-style__image image-animation animate">
-                  <div class="section-style__image-photo" style="background-image: url(https://d13zar1jnk1q59.cloudfront.net/lp/assets/images/img_top_style3.jpg?rel=1570504688122);"></div>
-                </div>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <section class="section-howto" id="section-howto">
-    <div class="section-howto__inner">
-      <div class="section-howto__image">
-        <div class="section-howto__image-phone">&nbsp;</div>
-        <div class="section-howto__image-phone">&nbsp;</div>
-      </div>
-      <div class="section-howto__body">
-        <header class="section-howto__header">
-          <h2 class="section-howto__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <span>フクローの使い方</span>
-          </h2>
-        </header>
-        <div class="section-howto__content">
-          <ol class="section-howto__list">
-            <li class="section-howto__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-howto__item-inner">
-                <h3 class="section-howto__item-title">さがす</h3>
-                <div class="section-howto__item-text">
-                  <p>
-                    <span>豊富なコーディネートから</span>
-                    <span>洋服を選ぶ</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="section-howto__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-howto__item-inner">
-                <h3 class="section-howto__item-title">かりる</h3>
-                <div class="section-howto__item-text">
-                  <p>
-                    <span>注文から3日前後で</span>
-                    <span>手元に届く</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="section-howto__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-howto__item-inner">
-                <h3 class="section-howto__item-title">かえす</h3>
-                <div class="section-howto__item-text">
-                  <p>
-                    <span>クリーニング不要</span>
-                    <span>そのまま返却</span>
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section-plan" id="section-plan">
-    <div class="section-plan__inner">
-      <div class="section-plan__image section-plan__image--1 image-animation animate">
-        <div class="section-plan__image-photo">&nbsp;</div>
-      </div>
-      <div class="section-plan__body" style="opacity: 1;">
-        <header class="section-plan__header">
-          <h2 class="section-plan__title">
-            <span>料金プラン</span>
-            <span class="small">月額4000円
-              <span class="small">(税別)</span>
-            </span>
-          </h2>
-        </header>
-        <div class="section-plan__content">
-          <dl class="section-plan__list">
-            <dt class="section-plan__label">レンタル枠</dt>
-            <dd class="section-plan__value">3</dd>
-            <dt class="section-plan__label">買取割引</dt>
-            <dd class="section-plan__value">20%OFF</dd>
-            <%
-=begin%>
- <dt class="section-plan__label">レンタル回数</dt>
-            <dd class="section-plan__value">無制限</dd> 
-<%
-=end%>
-            <dt class="section-plan__label">クリーニング</dt>
-            <dd class="section-plan__value">不要</dd>
-          </dl>
-          <div class="section-plan__amount">
-            <div class="amount">
-              <p>
-                <span class="amount__prefix">月額</span>
-                <span class="amount__value">￥4,000</span>
-                <span class="amount__suffix">（税別）</span>
-              </p>
-              <p>
-                <small>返却手数料:0円/1回(税別)</small>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-plan__image section-plan__image--2 image-animation image-animation--right animate">
-        <div class="section-plan__image-photo">&nbsp;</div>
-      </div>
-      <div class="section-plan__body" style="opacity: 1;">
-        <div class="section-plan__content">
-          <ul class="section-plan__points">
-            <li class="section-plan__point">
-              <h3 class="section-plan__point-title">厳選したアイテムだけ届く</h3>
-              <div class="section-plan__point-text">
-                <p>取扱う洋服は全て新品
-                  <br>最新トレンドアイテムが届く
-                </p>
-              </div>
-            </li>
-            <li class="section-plan__point">
-              <h3 class="section-plan__point-title">クリーニング不要</h3>
-              <div class="section-plan__point-text">
-                <p>楽しんだ洋服は
-                  <br>クリーニング不要でそのまま返却
-                </p>
-              </div>
-            </li>
-            <li class="section-plan__point">
-              <h3 class="section-plan__point-title">お気に入りは返さない</h3>
-              <div class="section-plan__point-text">
-                <p>割引き価格で買い取るか
-                  <br>30日間で返却
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section-lifestyle" id="section-lifestyle">
-    <div class="section-lifestyle__inner">
-      <div class="section-lifestyle__body">
-        <header class="section-lifestyle__header">
-          <h2 class="section-lifestyle__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <%= link_to '無料会員登録はこちら', spree.signup_path %>
-          </h2>
-        </header>
-        <%
-=begin%>
- <div class="section-lifestyle__content">
-          <ol class="section-lifestyle__list">
-            <li class="section-lifestyle__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-lifestyle__item-inner" id="play_button1">
-                <div class="section-lifestyle__image section-lifestyle__image--1">
-                  <button class="section-lifestyle__image-photo">&nbsp; 
-                    <div class="section-lifestyle__play-button"></div>
-                  </button>
-                  <div class="section-lifestyle__youtube-player" id="player1"></div>
-                </div>
-                <button class="section-lifestyle__item-text" id="play_text1">『ママ』篇</button>
-              </div>
-            </li>
-            <li class="section-lifestyle__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-lifestyle__item-inner" id="play_button2">
-                <div class="section-lifestyle__image section-lifestyle__image--2">
-                  <button class="section-lifestyle__image-photo">&nbsp; 
-                    <div class="section-lifestyle__play-button"></div>
-                  </button>
-                  <div class="section-lifestyle__youtube-player" id="player2"></div>
-                </div>
-                <button class="section-lifestyle__item-text" id="play_text2">『ビジネス』篇</button>
-              </div>
-            </li>
-            <li class="section-lifestyle__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-              <div class="section-lifestyle__item-inner" id="play_button3">
-                <div class="section-lifestyle__image section-lifestyle__image--3">
-                  <button class="section-lifestyle__image-photo">&nbsp; 
-                    <div class="section-lifestyle__play-button"></div>
-                  </button>
-                  <div class="section-lifestyle__youtube-player" id="player3"></div>
-                </div>
-                <button class="section-lifestyle__item-text" id="play_text3">『学生』篇</button>
-              </div>
-            </li>
-          </ol>
-        </div> 
-<%
-=end%>
-      </div>
-    </div>
-  </section>
-  <section class="section-faq" id="section-faq">
-    <div class="section-faq__inner">
-      <header class="section-faq__header">
-        <h2 class="section-faq__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-          <span>よくある質問 </span>
-        </h2>
-      </header>
-      <div class="section-faq__content">
-        <ol class="section-faq__list">
-          <li class="section-faq__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <a class="section-faq__item-trigger" id="faq-price" href="https://faq.mechakari.com/hc/ja/articles/115000314572-%E6%96%99%E9%87%91%E3%81%AF%E3%81%84%E3%81%8F%E3%82%89%E3%81%A7%E3%81%99%E3%81%8B-">料金はいくらですか？</a>
-          </li>
-          <li class="section-faq__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <a class="section-faq__item-trigger" id="faq-service" href="https://faq.mechakari.com/hc/ja/articles/115000314592-%E6%9C%88%E9%A1%8D%E6%96%99-%E8%BF%94%E5%8D%B4%E6%89%8B%E6%95%B0%E6%96%99%E4%BB%A5%E5%A4%96%E3%81%AB%E8%B2%BB%E7%94%A8%E3%81%AF%E3%81%8B%E3%81%8B%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-">月額料、返却手数料以外に費用はかかりますか？</a>
-          </li>
-          <li class="section-faq__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <a class="section-faq__item-trigger" id="faq-item" href="https://faq.mechakari.com/hc/ja/articles/115000312491-%E9%80%81%E6%96%99%E3%82%84%E8%BF%94%E9%80%81%E6%96%99%E3%81%AF%E3%81%8B%E3%81%8B%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-">送料や返送料はかかりますか？</a>
-          </li>
-          <li class="section-faq__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <a class="section-faq__item-trigger" id="faq-back" href="https://faq.mechakari.com/hc/ja/articles/115000312751-%E8%BF%94%E5%8D%B4%E6%89%8B%E6%95%B0%E6%96%99%E3%81%A3%E3%81%A6%E4%BD%95%E3%81%A7%E3%81%99%E3%81%8B-">返却手数料って何ですか？</a>
-          </li>
-          <li class="section-faq__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <a class="section-faq__item-trigger" id="faq-sixty" href="https://faq.mechakari.com/hc/ja/articles/115000316432-60%E6%97%A5%E3%81%9F%E3%81%A3%E3%81%9F%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E3%81%8C%E8%B2%B0%E3%81%88%E3%82%8B%E3%81%A8%E3%81%AF-">60日たったアイテムが貰えるとは？</a>
-          </li>
-          <li class="section-faq__item" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <a class="section-faq__item-trigger" id="faq-limit" href="https://faq.mechakari.com/hc/ja/articles/115000315132-%E5%80%9F%E3%82%8A%E3%82%89%E3%82%8C%E3%82%8B%E6%95%B0%E3%81%AB%E5%88%B6%E9%99%90%E3%81%AF%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%81%8B-">借りられる数に制限はありますか？</a>
-          </li>
-        </ol>
-      </div>
-      <footer class="section-faq__footer">
-        <a class="section-faq__footer-trigger" id="btn-view-more" href="https://faq.mechakari.com/hc/ja">VIEW MORE</a>
-      </footer>
-    </div>
-  </section>
-  <section class="section-download" id="section-download">
-    <div class="section-download__inner">
-      <div class="section-download__phone">
-        <div class="section-download__phone-photo" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">&nbsp;</div>
-      </div>
-      <div class="section-download__body">
-        <header class="section-download__header">
-          <h2 class="section-download__title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></h2>
-        </header>
-        <%
-=begin%>
- <div class="section-download__content" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-          <p>
-            <span>ファッションサブスクリプション
-              <br>「MECHAKARI」
-            </span>
-            <span>無料アプリをダウンロード</span>
-          </p>
-        </div> 
-<%
-=end%>
-        <%
-=begin%>
- <footer class="section-download__footer">
-          <div class="download" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-            <ul class="download__list">
-              <li class="download__item download__item--ios">
-                <a class="download__item-trigger" href="https://t.metaps.biz/v1/cpi/click?campaign_id=kocom-mechakari-af-ios56c4700133802dbc05b1e1cd36&amp;network_id=1599&amp;device_id=device_id&amp;site_id=1" target="_blank">App Storeからダウンロード</a>
-              </li>
-              <li class="download__item download__item--android">
-                <a class="download__item-trigger" href="https://t.metaps.biz/v1/cpi/click?campaign_id=kocom-mechakari-cc-android56c46ffeea70020353b95f589f&amp;network_id=1599&amp;device_id=device_id&amp;site_id=1" target="_blank">Google Playで手に入れよう</a>
-              </li>
-            </ul>
-          </div>
-        </footer> 
-<%
-=end%>
-      </div>
-      <div class="section-download__image animate">
-        <div class="section-download__image-photo">&nbsp;</div>
-      </div>
+    <div class='page-top__service page-top__section'>
+      <div class='page-top__head'>サービス内容</div>
+      <div class='page-top__subtitle'>1ヶ月間月額定額制で下記サービスを受けられます。</div>
+      <p class='page-top__service__content'>・1ヶ月に2点の洋服をレンタルできます。</p>
+      <p class='page-top__service__content'>・お客様の方でのクリーニングは不要です。<br>（洋服は毎回お送りする前に弊社でクリーニングします）</p>
+      <p class='page-top__service__content'>・月額会員の方はレンタル時の配送料は一切なし！<br>安心安全の日本郵政様がお届け<br>*月額会員でなくても洋服の購入は可能です。</p>
+      <p class='page-top__service__content'>・取り扱いの洋服はブランド物を多数！</p>
+      <p class='page-top__service__content'>・シーン毎にお好きな洋服を選択可能！</p>
+      <p class='page-top__service__content'>・会員の方は○○%引きで購入可能。</p>
     </div>
   </section>
 </div>

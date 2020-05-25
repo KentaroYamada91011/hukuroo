@@ -12,10 +12,13 @@ body {
 	}
 }
 .container {
-  width: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
-
+.drawer-nav .drawer-toggle  {
+	display: none;
+}
 
 .fronted__wrapper {
 	#content {

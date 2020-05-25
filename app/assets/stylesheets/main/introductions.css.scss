@@ -4062,6 +4062,109 @@ img {
   font-size: 12px
 }
 
+.page-top__head {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 32px;
+}
+
+.page-top__subtitle {
+  text-align: center;
+}
+
+.page-top__image {
+  margin: auto;
+  display: block;
+  width: 180px;
+}
+
+.page-top__image--first {
+  margin: auto;
+  display: block;
+  width: 120px;
+  padding-top: 40px;
+}
+
+.page-top__images__image {
+  margin: auto;
+  display: block;
+  width: 220px;
+}
+
+.page-top__images__description {
+  text-align: center;
+}
+
+.page-top__imageWrapper {
+  margin: 40px;
+}
+.page-top__head--first {
+  padding-bottom: 60px;
+  padding-top: 0;
+}
+.page-top__imageWrapper img {
+  margin: 0 auto 20px;
+}
+.page-top__line {
+  width: 100%;
+  height: 20px;
+  margin-top: 6px;
+  position: absolute;
+  left: 0;
+  background: #f2f2f2;
+  border-top: 2px solid #e1e1e1;
+  border-bottom: 2px solid #e1e1e1;
+}
+.page-top__section {
+  padding-top: 32px;
+}
+
+.page-top__use__imageWrapper {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+}
+.page-top__use__step {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.page-top__service {
+  width: 380px;
+  margin: auto;
+}
+.page-top__price {
+  width: 300px;
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-between;
+}
+.page-top__price--left {
+  width: 65%;
+  border-radius: 100px;
+  background-color: orange;
+  padding: 6px 12px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+.page-top__price--right {
+  text-align: center;
+  width: 35%;
+  font-weight: 700;
+  font-size: 16px;
+}
+.page-top__use__image  {
+  margin: 20px;
+}
+.page-top__use__description {
+  text-align: center;
+}
+.page-top__prices a {
+  display: block;
+  text-align: center;
+}
 .page-collection {
   padding-top: 128px
 }
@@ -5984,6 +6087,9 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
+  .page-top__use__imageWrapper {
+    display: block;
+  }
   .header-drawer {
     -webkit-animation-duration: .3s;
     animation-duration: .3s;

@@ -66,6 +66,9 @@ module Spree
 
       flash.each do |msg_type, text|
         unless ignore_types.include?(msg_type)
+          if text == "Invalid email or password."
+            text = "メールアドレスかパスワードが正しくありません"
+          end
           concat(content_tag(:div, text, class: "flash #{msg_type}"))
         end
       end
