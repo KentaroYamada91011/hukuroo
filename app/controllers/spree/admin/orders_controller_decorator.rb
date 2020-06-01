@@ -40,6 +40,7 @@ Spree::Admin::OrdersController.class_eval do
       page(params[:page]).
       per(params[:per_page] || Spree::Config[:orders_per_page])
 
+    @perchased_items = Spree::PurchasedItem.all
     # Restore dates
     params[:q][:created_at_gt] = created_at_gt
     params[:q][:created_at_lt] = created_at_lt

@@ -5,6 +5,13 @@
       <%= address.company %>
     </div>
   <% end %>
+  <div class="country-name"><%= address.country.try(:name) %></div>
+  <span class="postal-code"><%= address.zipcode %></span>
+    <div class="local">
+      <span class="locality"><%= address.city %></span>
+      
+    </div>
+  </div>
   <div class="adr">
     <div class="street-address">
       <div class="street-address-line">
@@ -16,13 +23,6 @@
         </div>
       <% end %>
     </div>
-    <div class="local">
-      <span class="locality"><%= address.city %></span>
-      <span class="region"><%= address.state_text %></span>
-      <span class="postal-code"><%= address.zipcode %></span>
-      <div class="country-name"><%= address.country.try(:name) %></div>
-    </div>
-  </div>
   <% unless address.phone.blank? %>
     <div class="tel">
       <span class="type"><%= t('spree.phone') %></span>

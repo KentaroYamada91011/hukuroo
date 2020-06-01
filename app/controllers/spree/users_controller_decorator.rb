@@ -1,5 +1,5 @@
 Spree::UsersController.class_eval do
-  rescue_from Spree::Core::DestroyWithOrdersError, with: :error_during_processing
+  # rescue_from Spree::Core::DestroyWithOrdersError, with: :error_during_processing
 
   def index
     @users = Spree.user_class.accessible_by(current_ability, :show)
@@ -22,12 +22,33 @@ Spree::UsersController.class_eval do
 
   def show
     @account_page = true
+    @orders = user.orders
+    @purchased_items = user.purchased_items
     respond_with(user)
+  end
+
+  def orders
+    @account_page = true
+    @user = spree_current_user
+    @orders = user.orders
+  end
+
+  def purchased
+    @account_page = true
+    @user = spree_current_user
+    @purchased_items = user.purchased_items
   end
 
   def address
     @account_page = true
-    respond_with(user)
+    @user = spree_current_user
+    @shipment_address = @user.ship_address || Spree::Address.new()
+  end
+
+  def address_update
+    @account_page = true
+    @user = spree_current_user
+    @shipment_address = @user.ship_address || Spree::Address.new()
   end
 
   def new; end
@@ -60,6 +81,7 @@ Spree::UsersController.class_eval do
   private
 
   def user
+    # @user ||= Spree.user_class.accessible_by(current_ability, :show).find(spree_current_user.id)
     @user ||= Spree.user_class.accessible_by(current_ability, :show).find(params[:id])
   end
 

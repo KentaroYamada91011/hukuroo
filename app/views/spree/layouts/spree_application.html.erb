@@ -25,7 +25,7 @@
       <%if @account_page.present?%>
         <%= render partial: 'spree/shared/account_page' %>
       <%end%>
-      <div id="wrapper" class="row <%= @account_page.present? ? "fronted__account__wrapper": ""%>" data-hook>
+      <div id="wrapper" class="row <%= @account_page.present? ? "fronted__account__wrapper": ""%><%= @cart_page.present? ? "fronted__cart__wrapper": ""%>" data-hook>
 
         <%= taxon_breadcrumbs(@taxon) %>
         <%= render partial: 'spree/shared/hero_images' if @top_page.present? %>

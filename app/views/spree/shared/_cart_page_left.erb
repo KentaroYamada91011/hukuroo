@@ -1,18 +1,24 @@
-<div class='fronted__account__left__title'>お客様情報</div>
+<div class='fronted__cart__left__title'>レンタルカート</div>
 <ul>
-  <li><%= link_to "会員情報", spree.account_path %></li>
+  <li>
+    <div class='fronted__cart__left__card'>
+      <div class='fronted__cart__left__title'>
+
+      </div>
+    </div>
+  </li>
   <li><%=link_to '購入した商品', '/account/purchased'%></li>
   <li><%=link_to 'レンタルした商品', '/account/orders'%></li>
   <li><%=link_to '住所', '/addresses'%></li>
 </ul>
-<div class='fronted__account__left__title'>サポート</div>
+<div class='fronted__cart__left__title'>合計</div>
 <ul>
   <li><%= link_to 'よくある質問', main_app.corporate_path %></li>
   <li>お問い合わせ</li>
 </ul>
-<div class='fronted__account__left__title'>このサービスについて</div>
+<div class='fronted__cart__left__title'>お届け先</div>
 <ul>
-  <li><%= link_to '会社概要', main_app.corporate_path %></li>
+  <li><%= render "spree/shared/address", address: @user&.bill_address || @user&.addresses&.last %></li>
   <li><%= link_to '利用規約', main_app.terms_path %></li>
 </ul>
 <ul>

@@ -1,0 +1,14 @@
+<div class="fronted__account__content">
+  <div class='fronted__account__left'>
+  <%= render partial:'spree/shared/account_page_left'%>
+  </div>
+  <div class='fronted__account__right'>
+    <h1>住所</h1>
+    <%# <div class="columns omega six" data-hook="shipping_fieldset_wrapper"> %>
+  <section class="address-area">
+    <%= content_tag :h4, t('spree.billing_address') %>
+    <%= render "spree/shared/address", address: @user&.bill_address || @user&.addresses&.last %>
+    <%= link_to 'お届け先住所変更', new_address_path %>
+  </section>
+  </div>
+</div>

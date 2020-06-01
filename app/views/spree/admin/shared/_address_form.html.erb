@@ -2,13 +2,13 @@
 
 <div id="<%= type %>" data-hook="address_fields">
   <div class="field <%= "#{type}-row" %>">
-    <%= f.label :firstname %>
-    <%= f.text_field :firstname, class: 'fullwidth' %>
+    <%= f.label :lastname %>
+    <%= f.text_field :lastname, class: 'fullwidth' %>
   </div>
 
   <div class="field <%= "#{type}-row" %>">
-    <%= f.label :lastname %>
-    <%= f.text_field :lastname, class: 'fullwidth' %>
+    <%= f.label :firstname %>
+    <%= f.text_field :firstname, class: 'fullwidth' %>
   </div>
 
   <% if Spree::Config[:company] %>

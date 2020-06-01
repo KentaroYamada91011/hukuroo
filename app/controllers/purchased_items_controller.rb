@@ -1,6 +1,8 @@
 class PurchasedItemsController < Spree::StoreController
   def new
+    @cart_page = true
     @product = Spree::Product.find(params[:product_id])
+    @user = current_spree_user
     @amount = @product.price.to_i
   end
 

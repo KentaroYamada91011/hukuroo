@@ -1,0 +1,19 @@
+<% variant = line_item2.variant -%>
+<%= order_form.fields_for :line_items, line_item2 do |item_form| -%>
+  <tr class="<%= cycle('', 'alt') %> line-item">
+    <td class="cart-item-price" data-hook="cart_item_price">
+      <%= line_item2.single_money.to_html %>
+      <br>
+      <p style="font-size:8px">(購入の場合)</p>
+    </td>
+    <td class="cart-item-quantity" data-hook="cart_item_quantity">
+      <%= item_form.number_field :quantity, min: 0,max: 1, class: "line_item_quantity", size: 5 %>
+    </td>
+    <td class="cart-item-total" data-hook="cart_item_total">
+      ¥0
+    </td>
+    <td class="cart-item-delete" data-hook="cart_item_delete">
+      <%= link_to image_tag('icons/delete.png'), '#', class: 'delete', id: "delete_#{dom_id(line_item2)}" %>
+    </td>
+  </tr>
+<% end -%>

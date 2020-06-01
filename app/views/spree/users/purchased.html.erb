@@ -1,0 +1,39 @@
+<div class="fronted__account__content">
+  <div class='fronted__account__left'>
+  <%= render partial:'spree/shared/account_page_left'%>
+  </div>
+  <div class='fronted__account__right'>
+  <h1><%= I18n.t('spree.my_orders') %></h1>
+
+    <div data-hook="account_summary" class="account-summary">
+    <div data-hook="account_my_orders" class="account-my-orders">
+      <% if @purchased_items.present? %>
+        <table class="order-summary">
+          <thead>
+          <tr>
+            <th class="order-date">商品</th>
+            <th class="order-date">日付</th>
+            <th class="order-status">ステータス</th>
+            <th class="order-total">値段</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @purchased_items.each do |order| %>
+            <tr class="<%= cycle('even', 'odd') %>">
+              <td class="order-date"><%= order.product.name %></td>
+              <td class="order-date"><%= order.created_at.to_date %></td>
+              <td class="order-status">購入</td>
+              <td class="order-total">￥<%= order.product.price %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p><%= I18n.t('spree.you_have_no_orders_yet') %></p>
+      <% end %>
+      <br />
+    </div>
+    </div>
+  </div>
+
+</div>

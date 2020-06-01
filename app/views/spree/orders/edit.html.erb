@@ -1,6 +1,48 @@
-<% @body_id = 'cart' %>
-<div data-hook="cart_container">
+<div class="fronted__cart__content">
   <h1><%= t('spree.shopping_cart') %></h1>
+  <div class='fronted__cart__left'>
+    <div class='fronted__cart__left__title'>レンタルカート</div>
+      <% if @order.line_items.empty? %>
+
+        <div data-hook="empty_cart">
+          <p><%= t('spree.your_cart_is_empty') %></p>
+          <p><%= link_to t('spree.continue_shopping'), products_path, class: 'button continue' %></p>
+        </div>
+
+      <% else %>
+      
+        <%= form_for @order, url: update_cart_path, html: {id: 'update-cart'} do |order_form| %>
+          <% order = order_form.object %>
+          <%order.line_items.each do |item|%>
+          <% variant = item.variant -%>
+          <ul>
+            <li>
+            <div class='fronted__cart__left__card'>
+              <div class='fronted__cart__left__image'>
+                <%= link_to(render('spree/shared/image',
+                                  image: (variant.gallery.images.first || variant.product.gallery.images.first),
+                                  size: :small), variant.product) %>
+              </div>
+              <div class='fronted__cart__left__content'>
+                <div class='fronted__cart__left__card__title'>
+                  <%=item.name%>
+                </div>
+                <div class='fronted__cart__left__card__price'>
+                  ￥<%=item.price.round%>（税込み）
+                </div>
+              </div>
+            </li>
+          </ul>
+          <%end%>
+        <% end %>
+      <% end %>
+      
+    <div class='fronted__cart__left__title'>合計</div>
+    <ul>
+    <li>
+      <% @body_id = 'cart' %>
+<div data-hook="cart_container">
+
 
   <% if @order.line_items.empty? %>
 
@@ -19,7 +61,7 @@
             <%= render 'spree/orders/form', order_form: order_form %>
           </div>
 
-          <div class="links columns sixteen alpha omega" data-hook="cart_buttons">
+          <div class="links columns sixteen alpha omega cart_buttons" data-hook="cart_buttons">
             <%= button_tag t("spree.update"), class: "primary", id: "update-button" %>
 
             <% if spree_current_user.try(:user_billing).try(:expired_date).present? && spree_current_user.try(:user_billing).try(:expired_date) < Date.today %>
@@ -39,6 +81,16 @@
         </div>
       <% end %>
     </div>
+    </div>
+    </li>
+    </ul>
+    <div class='fronted__cart__left__title'>お届け先</div>
+    <ul>
+      <li><%= render "spree/shared/address", address: @user&.bill_address || @user&.addresses&.last %></li>
+    </ul>
+  </div>
+
+</div>
 
     <div id="empty-cart" data-hook>
       <%= form_tag empty_cart_path, method: :put do %>

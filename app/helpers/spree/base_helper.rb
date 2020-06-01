@@ -69,6 +69,9 @@ module Spree
           if text == "Invalid email or password."
             text = "メールアドレスかパスワードが正しくありません"
           end
+          if text == "Welcome! You have signed up successfully."
+            text = "アカウントを作成しました"
+          end
           concat(content_tag(:div, text, class: "flash #{msg_type}"))
         end
       end

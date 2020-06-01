@@ -15,15 +15,19 @@ Rails.application.routes.draw do
   get '/privacy_policy' => 'spree/static#privacy_policy'
   get '/optout'         => 'spree/static#optout'
   get '/upgrade'        => 'spree/static#upgrade'
+  get 'account/orders'  => 'spree/users#orders'
+  get 'account/purchased'  => 'spree/users#purchased'
+
+
+
+  # get '/upgrade'        => 'spree/static#upgrade'
+  # get '/upgrade'        => 'spree/static#upgrade'
 
   # 新規追加画面
   resources :products do
     resources :purchased_items,  only: %i(new create), controller: 'purchased_items'
   end
-
-  namespace :account do
-    get '/address'         => 'spree/user#address'
-  end
+  resources :addresses
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

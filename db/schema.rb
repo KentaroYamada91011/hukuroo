@@ -613,6 +613,8 @@ ActiveRecord::Schema.define(version: 2019_11_20_112447) do
     t.string "paymentstate"
     t.string "description"
     t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "spree_refund_reasons", force: :cascade do |t|

@@ -36,25 +36,26 @@
     <% end %>
 
     <div id="payment-method-fields" data-hook>
-      <% @order.available_payment_methods.each do |method| %>
+      <%# <% @order.available_payment_methods.find(3).each do |method| %>
       <p>
         <label>
-          <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.available_payment_methods.first %>
-          <%= t(method.name, scope: 'spree.payment_methods', default: method.name) %>
+          <%= radio_button_tag "order[payments_attributes][][payment_method_id]", @order.available_payment_methods.find(3).id, @order.available_payment_methods.find(3) == @order.available_payment_methods.first %>
+          <%= t(@order.available_payment_methods.find(3).name, scope: 'spree.payment_methods', default: @order.available_payment_methods.find(3).name) %>
         </label>
       </p>
-      <% end %>
+      <%# <% end %>
     </div>
 
     <ul id="payment-methods" data-hook>
-      <% @order.available_payment_methods.each do |method| %>
-        <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
-          <fieldset>
-            <%= render partial: "spree/checkout/payment/#{method.partial_name}", locals: { payment_method: method } %>
+      <%# <% @order.available_payment_methods.each do |method| %>
+        <%# <li id="payment_method_<%= method.id" class="<%= 'last' if method == @order.available_payment_methods.last" data-hook> %>
+          <%# <fieldset>
+            <%= render partial: "spree/checkout/payment/#{method.partial_name}", locals: { payment_method: method } 
           </fieldset>
-        </li>
-      <% end %>
+        </li> %>
+      <%# <% end %>
     </ul>
+
     <br style="clear:both;" />
   </div>
 </fieldset>

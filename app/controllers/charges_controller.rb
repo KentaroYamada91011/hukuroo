@@ -43,7 +43,7 @@ class ChargesController < Spree::StoreController
     data = params.fetch(:user_billing, {}).permit(:user_id,:is_billing,:ticket_number, :expired_date)
     data[:user_id]        = current_spree_user.id
     data[:is_billing]     = true
-    data[:ticket_number]  = 1
+    data[:ticket_number]  = 2
     data[:expired_date]   = (Date.today >> 1).strftime
     data
   end

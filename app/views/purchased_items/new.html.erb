@@ -1,34 +1,44 @@
-<h1>new purchase</h1>
-<h2><%= @product.name %></h2>
-<h2><%= @product.description %></h2>
-<h2>値段</h2>
-<h2><%= @product.price.to_i %></h2>
+
 <%= form_tag product_purchased_items_path do %>
-  <article>
-    <table class="fronted__charges__table">
-    <tr>
-      <th>無料プラン</th>
-      <th class="popular">月額定額制プラン</span></th>
-      <%
-=begin%>
- <th>上級プラン</th> 
-<%
-=end%>
-    </tr>
-    <tr>
-      <td>¥0</td>
-      <td class="popular">
-        ¥<%= @amount %>
-      </td>
-      <%
-=begin%>
- <td>¥8,000</td> 
-<%
-=end%>
-    </tr>
-    <tr>
-      <td><a href="#">申し込み済み</a></td>
-      <td>
+<div class="fronted__cart__content">
+  <h1>購入</h1>
+  <div class='fronted__cart__left'>
+    <div class='fronted__cart__left__title'>レンタルカート</div>
+          
+          <% variant = @product -%>
+          <ul>
+            <li>
+            <div class='fronted__cart__left__card'>
+              <div class='fronted__cart__left__image'>
+                <%= link_to(render('spree/shared/image',
+                                  image: (@product.gallery.images.first || @product.product.gallery.images.first),
+                                  size: :small), @product) %>
+              </div>
+              <div class='fronted__cart__left__content'>
+                <div class='fronted__cart__left__card__title'>
+                  <%=@product.name%>
+                </div>
+                <div class='fronted__cart__left__card__price'>
+                  <span class='product-taxon'>販売価格</span>￥<%=@product.price.round%>（税込み）
+                </div>
+              </div>
+            </div>
+            </li>
+          </ul>
+          
+        
+      
+    <div class='fronted__cart__left__title'>お届け先</div>
+    <ul>
+      <li><%= render "spree/shared/address", address: @user&.bill_address || @user&.addresses&.last %></li>
+      
+    </ul>
+    <ul>
+      <li><%= link_to 'お届け先住所変更', new_address_path %></li>
+  </div>
+
+</div>
+
         <% if flash[:error].present? %>
           <div id="error_explanation">
             <p><%= flash[:error] %></p>
@@ -53,18 +63,9 @@
  <td><a href="#">申し込み</a></td> 
 <%
 =end%>
-    </tr>
-    <tr>
-      <td>保証なし</td>
-      <td class="popular">毎月2点まで借りることができ、
-<br>洋服を返却して新しい洋服を借りられます。
-<br>クリーニングや返送料金は0円です。*月額会員のみ</td>
-      <%
-=begin%>
- <td>保証3ヶ月</td> 
-<%
-=end%>
-    </tr>
-  </table>
-  </article>
+
+
+
+  
+</div>
 <% end %>

@@ -114,7 +114,7 @@
 <% end %>
 
 <%= paginate @orders, theme: "solidus_admin" %>
-
+<h2>レンタル一覧</h2>
 <% if @orders.any? %>
   <table class="index" id="listing_orders" data-hook>
     <colgroup>
@@ -195,5 +195,57 @@
                  new_resource_url: spree.new_admin_order_path %>
   </div>
 <% end %>
-
 <%= paginate @orders, theme: "solidus_admin" %>
+
+<h2>購入一覧</h2>
+<table class="index" id="listing_orders" data-hook>
+    <colgroup>
+       <col style="width: 13%;">
+       <col style="width: 10%;">
+       <col style="width: 10%;">
+       <col style="width: 12%;">
+       <% if Spree::Order.checkout_step_names.include?(:delivery) %>
+         <col style="width: 12%;">
+       <% end %>
+       <col style="width: 25%;">
+       <col style="width: 10%;">
+       <col style="width: 8%;">
+    </colgroup>
+    <thead>
+      <tr data-hook="admin_orders_index_headers">
+        <th>日付</th>
+        <th>商品</th>
+        <th>状態</th>
+        <th>状況</th>
+        <th>状況</th>
+        <th>メール</th>
+        <th class="align-right">商品</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @perchased_items.each do |order| %>
+      <tr data-hook="admin_orders_index_rows">
+        <td><%= order.created_at %></td>
+        <td><%= link_to order.product.name, admin_product_path(order.product) %></td>
+        <td>
+        </td>
+        <td>
+          <span class="pill pill-complete">
+            購入
+          </span>
+        </td>
+        <td>
+        </td>
+        <td>
+          <% if order.user %>
+            <%= link_to order.user.email, edit_admin_user_path(order.user) %>
+          <% else %>
+            <%= mail_to order.user.email %>
+          <% end %>
+        </td>
+        <td class="align-right"><%= order.product.name %></td>
+      </tr>
+    <% end %>
+    </tbody>
+</table>
+

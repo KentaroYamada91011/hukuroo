@@ -1,8 +1,9 @@
 @import "../common/variables";
+
 .fronted {
-  &__account{
+  &__cart{
     &__left {
-      width: 30%;
+      width: 100%;
       margin-right: 10%;
       @include sp {
         width: 100%;
@@ -26,6 +27,33 @@
         @include sp {
           text-align: left;
         }
+      }
+      &__card {
+        display: flex;
+        &__title {
+          position: absolute;
+          top: 0;
+          font-size: 24px;
+          font-weight: 700;
+          @include sp {
+            font-size: 18px;
+          }
+        }
+        &__price {
+          position: absolute;
+          bottom: 0;
+          font-size: 24px;
+          @include sp {
+            font-size: 18px;
+          }
+        }
+      }
+      &__image {
+        width: 30%;
+      }
+      &__content {
+        width: 70%;
+        position: relative;
       }
     }
     &__right {
@@ -56,13 +84,15 @@
       }
     }
     &__wrapper {
-      margin: 0!important;
-      padding: 90px 38px 38px;
+      margin: 0 !important;
+      padding: 90px 0px 0px;
       background-color: #f9f9f9;
-      @include sp {
-        padding: 20px 12px 12px;
+      .cart_buttons {
+        display: contents;
       }
-      .fullwidth {width: 100%;}
+      #empty-cart {
+        display: contents;
+      }
     }
     &__page {
       position: relative;
@@ -105,15 +135,11 @@
       }
     }
     &__content {
-      display: flex;
+      display: block;
       @include sp {
         display: block;
         width: 94vw;
       }
     }
   }
-}
-
-.address-area {
-  padding: 20px;
 }

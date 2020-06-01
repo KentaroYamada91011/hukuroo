@@ -36,7 +36,7 @@ en:
         cancel: Cancel
         quantity: Quantity
         shipment: Shipment
-        state: State
+        state: 都道府県
     errors:
       models:
         spree/fulfilment_changer:
@@ -145,7 +145,7 @@ en:
         considered_risky: Risky
         coupon_code: Coupon Code
         created_at: Order Date
-        email: Customer E-Mail
+        email: メールアドレス
         included_tax_total: Tax (incl.)
         ip_address: IP Address
         item_total: Item Total
@@ -193,7 +193,7 @@ en:
         type: Type
       spree/price:
         amount: 価格
-        country: Country
+        country: 国
         currency: Currency
         is_default: Currently Valid
         price: 価格
@@ -363,17 +363,17 @@ en:
         admin_name: Internal Name
         backorderable_default: Backorderable Default
         check_stock_on_transfer: Check Stock on Transfer
-        city: City
+        city: 市区町村
         code: Code
-        country_id: Country
+        country_id: 国
         default: Default
         fulfillable: Fulfillable
         name: Name
         phone: Phone
         propagate_all_variants: Propagate All Variants
         restock_inventory: Restock Inventory
-        state: State
-        state_id: State
+        state: 都道府県
+        state_id: 都道府県
         zipcode: Zip
       spree/stock_movement:
         originated_by: Originated By
@@ -407,7 +407,7 @@ en:
         user_total_amount: Total Amount
       spree/store_credit_reason:
         name: Name
-        state: State
+        state: 都道府県
       spree/store_credit_update_reason:
         name: Name
       spree/tax_category:
@@ -548,7 +548,7 @@ en:
               payment_source_already_exists: already has this payment source in their wallet
     models:
       spree/address:
-        one: Address
+        one: 配送先
         other: Addresses
       spree/adjustment:
         one: Adjustment
@@ -611,7 +611,7 @@ en:
         one: Tiered Percent
         other: Tiered Percent
       spree/country:
-        one: Country
+        one: 国
         other: Countries
       spree/credit_card:
         one: Credit Card
@@ -727,10 +727,10 @@ en:
         one: Shipping Category
         other: Shipping Categories
       spree/shipping_method:
-        one: Shipping Method
+        one: 送料
         other: Shipping Methods
       spree/state:
-        one: State
+        one: 都道府県
         other: States
       spree/stock: stock
       spree/stock_item:
@@ -908,7 +908,7 @@ en:
         not_started: Not started
       stock_locations:
         form:
-          address: Address
+          address: 配送先
           general: General
           settings: Settings
       store_credits:
@@ -1100,7 +1100,7 @@ en:
     base_percent: Base Percent
     bill_address: Bill Address
     billing: Billing
-    billing_address: Billing Address
+    billing_address: お客様住所
     both: Both
     calculated_reimbursements: Calculated Reimbursements
     calculator: Calculator
@@ -1141,7 +1141,7 @@ en:
     category: Category
     character_limit: Limit of 255 characters
     charged: Charged
-    check: Check
+    check: 現金
     check_stock_on_transfer: Check stock on transfer
     checkout: レンタルする
     choose_a_customer: Choose a Customer
@@ -1152,7 +1152,7 @@ en:
     choose_promotion_action: Choose Action
     choose_promotion_rule: Choose Rule
     choose_reason: Choose Reason
-    city: City
+    city: 市区町村
     clear_cache: Clear Cache
     clear_cache_ok: Cache was flushed
     clear_cache_warning: Clearing cache will temporarily reduce the performance of
@@ -1181,7 +1181,7 @@ en:
       Please try again.
     count_on_hand: Count On Hand
     countries: Countries
-    country: Country
+    country: 国
     country_based: Country Based
     country_name: Name
     country_names:
@@ -1256,7 +1256,7 @@ en:
     deleted_successfully: Deleted successfully
     deleted_variants_present: Some line items in this order have products that are
       no longer available.
-    delivery: Delivery
+    delivery: 配達
     depth: Depth
     description: Description
     destination: Destination
@@ -1372,7 +1372,7 @@ en:
     finalized_by: Finalized by
     find_a_taxon: Find a Taxon
     first_item: First Item
-    first_name: First Name
+    first_name: 名前（名）
     first_name_begins_with: First Name Begins With
     flat_percent: Flat Percent
     flat_rate_per_order: Flat Rate
@@ -1530,7 +1530,7 @@ en:
     jirafe: Jirafe
     landing_page_rule:
       path: Path
-    last_name: Last Name
+    last_name: 名前（姓）
     last_name_begins_with: Last Name Begins With
     learn_more: Learn More
     lifetime_stats: Lifetime Stats
@@ -1700,15 +1700,15 @@ en:
           information for your records.
         order_summary_canceled: Order Summary [CANCELED]
         subject: Cancellation of Order
-        subtotal: 'Subtotal:'
+        subtotal: '合計:'
         total: 'Order Total:'
       confirm_email:
         dear_customer: Dear Customer,
         instructions: Please review and retain the following order information for
           your records.
-        order_summary: Order Summary
+        order_summary: オーダー
         subject: Order Confirmation
-        subtotal: 'Subtotal:'
+        subtotal: '合計:'
         thanks: Thank you for your business.
         total: 'Order Total:'
       inventory_cancellation:
@@ -1727,17 +1727,17 @@ en:
     order_refresh_totals: Refresh Totals
     order_resumed: Order resumed
     order_state:
-      address: Address
+      address: 配送先
       awaiting_return: Awaiting return
       canceled: Canceled
       cart: レンタルカート
-      complete: Complete
-      confirm: Confirm
-      delivery: Delivery
-      payment: Payment
+      complete: 完了
+      confirm: 確認
+      delivery: 配達
+      payment: お支払い
       resumed: Resumed
       returned: Returned
-    order_summary: Order Summary
+    order_summary: 注文
     order_sure_want_to: Are you sure you want to %{event} this order?
     order_total: 合計金額
     order_updated: Order Updated
@@ -1758,7 +1758,7 @@ en:
     payment_amount: Payment Amount
     payment_could_not_be_created: Payment could not be created.
     payment_identifier: Payment Identifier
-    payment_information: Payment Information
+    payment_information: お支払い
     payment_method: Payment Method
     payment_method_not_supported: That payment method is unsupported. Please choose
       another one.
@@ -1791,7 +1791,7 @@ en:
     percent: Percent
     percent_per_item: Percent Per Item
     permalink: Permalink
-    phone: Phone
+    phone: 電話番号
     place_order: 注文を確定する
     please_define_payment_methods: Please define some payment methods first.
     please_enter_reasonable_quantity: Please enter a reasonable quantity.
@@ -2013,14 +2013,14 @@ en:
     shipped: Shipped
     shipped_at: Shipped At
     shipping: Shipping
-    shipping_address: Shipping Address
+    shipping_address: 配送先
     shipping_categories: Shipping Categories
     shipping_category: Shipping Category
     shipping_flat_rate_per_item: Flat Rate per Package Item
     shipping_flat_rate_per_order: Flat Rate
     shipping_flexible_rate: Flexible Rate per Package Item
     shipping_instructions: Shipping Instructions
-    shipping_method: Shipping Method
+    shipping_method: 配送方法
     shipping_methods: Shipping Methods
     shipping_price_sack: Price sack
     shipping_rate:
@@ -2031,7 +2031,7 @@ en:
       label:
         sales_tax: "+ %{amount} %{tax_rate_name}"
         vat: incl. %{amount} %{tax_rate_name}
-    shipping_total: Shipping total
+    shipping_total: 配達合計
     shop_by_taxonomy:  "%{taxonomy}"
     shopping_cart: レンタル用ショッピングカート月に一度2点までレンタルできます
     show: Show
@@ -2055,9 +2055,9 @@ en:
       change_protocol: Please switch to using HTTP (rather than HTTPS) and retry this
         request.
     start: Start
-    state: State
+    state: 都道府県
     state_based: State Based
-    states: States
+    states: 都道府県
     states_count:
       one: "%{count} State"
       other: "%{count} States"
@@ -2113,9 +2113,9 @@ en:
     store_credit_category:
       default: Default
     store_rule:
-      choose_stores: Choose Stores
-    street_address: Street Address
-    street_address_2: Street Address (cont'd)
+    choose_stores: Choose Stores
+    street_address: 住所
+    street_address_2: 住所2
     subtotal: Subtotal
     subtract: Subtract
     success: Success
@@ -2156,8 +2156,7 @@ en:
         message: If you have received this email, then your email settings are correct.
         subject: Test Mail
     test_mode: Test Mode
-    thank_you_for_your_order: Thank you for your business. Please print out a copy
-      of this confirmation page for your records.
+    thank_you_for_your_order: フクローにてレンタルしてくださいましてありがとうございます。以下が注文の詳細となっております。レンタルの場合は金額がかかりません。
     there_are_no_items_for_this_order: There are no items for this order. Please add
       an item to the order to continue.
     there_were_problems_with_the_following_fields: There were problems with the following
@@ -2199,13 +2198,13 @@ en:
     unfinalize_all_adjustments: Unfinalize All Adjustments
     unlock: Unlock
     unrecognized_card_type: Unrecognized Card Type
-    unshippable_items: Unshippable Items
+    unshippable_items: Unshippable ItemsBILLING ADDRESS
     update: 更新する
     updated_successfully: Updated Successfully
     updating: Updating
     usage_limit: Usage Limit
     use_app_default: Use App Default
-    use_billing_address: Use Billing Address
+    use_billing_address: こちらの住所に配達する
     use_existing_cc: Use an existing card on file
     use_new_cc: Use a new card
     use_new_cc_or_payment_method: Use a new card / payment method
@@ -2251,9 +2250,9 @@ en:
     year: Year
     you_cannot_undo_action: You will not be able to undo this action
     you_have_no_orders_yet: 頼んだ商品がありません
-    your_cart_is_empty: サブスク会員登録はお済みですか？レンタル用のカートは空か使用できません
+    your_cart_is_empty: レンタル用のカートは空もしくは、サブスクリプション登録ができていません。
     your_order_is_empty_add_product: Your order is empty. Please add products first.
-    zip: Zip
+    zip: 郵便番号
     zipcode: Zip Code
     zone: Zone
     zones: Zones

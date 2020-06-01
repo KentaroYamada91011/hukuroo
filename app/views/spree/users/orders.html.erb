@@ -1,0 +1,41 @@
+<div class="fronted__account__content">
+  <div class='fronted__account__left'>
+  <%= render partial:'spree/shared/account_page_left'%>
+  </div>
+  <div class='fronted__account__right'>
+  <h1><%= I18n.t('spree.my_orders') %></h1>
+
+    <div data-hook="account_summary" class="account-summary">
+    <div data-hook="account_my_orders" class="account-my-orders">
+      <% if @orders.present? %>
+        <table class="order-summary">
+          <thead>
+          <tr>
+            <th class="order-number">レンタル番号</th>
+            <th class="order-date">日付</th>
+            <th class="order-status">ステータス</th>
+            <th class="order-total"><%= I18n.t('spree.total') %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @orders.each do |order| %>
+            <tr class="<%= cycle('even', 'odd') %>">
+              <td class="order-number"><%= link_to order.number, order_url(order) %></td>
+              <td class="order-date"><%= order&.completed_at&.to_date %></td>
+              <td class="order-status"><%= I18n.t("spree.order_state.#{order.state}").titleize %></td>
+              <td class="order-total">￥0</td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p><%= I18n.t('spree.you_have_no_orders_yet') %></p>
+      <% end %>
+      <br />
+      
+
+    </div>
+    </div>
+  </div>
+
+</div>

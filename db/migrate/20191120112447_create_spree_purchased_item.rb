@@ -8,6 +8,8 @@ class CreateSpreePurchasedItem < ActiveRecord::Migration[5.2]
       t.string :paymentstate
       t.string :description
       t.integer :price
+      t.datetime "created_at",                                              null: false
+      t.datetime "updated_at",                                              null: false
     end
   end
 end

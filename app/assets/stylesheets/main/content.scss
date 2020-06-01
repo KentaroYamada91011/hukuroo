@@ -2,21 +2,21 @@
 
 .fronted__content {
   &__image {
-    height: 180px;
+    height: auto;
+    min-height: auto;
     a {
       img {
         width: -webkit-fill-available;
-        height: 180px;
-        height: -webkit-fill-available;
+        height: 100%;
         object-fit: cover;
       }
     }
     @include sp {
-      height: 130px;
+      height: auto;
       a {
         height: max-content;
         img {
-          height: 130px;
+          height: auto;
         }
       }
     }
@@ -25,7 +25,7 @@
     font-size: 10px;
     font-weight: 700;
     padding: 0 8px;
-    background-color: #1DA1F2;
+    background-color: #4083de;
     border-radius: 100px;
     color: #fff;
     &--ladies {
