@@ -10,8 +10,8 @@ module Spree
     end
 
     def cart_link
-      # render partial: 'spree/shared/link_to_cart'
-      redirect_to cart_path
+      render partial: 'spree/shared/link_to_cart'
+      # redirect_to cart_path
       fresh_when(current_order, template: 'spree/shared/_link_to_cart')
     end
 
